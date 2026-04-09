@@ -75,18 +75,65 @@ pip install -r requirements.txt
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
 
-### Authentication (for TabPFN)
+### Authentication for TabPFN
 
-TabPFN requires authentication with Prior Labs:
+TabPFN is a transformer-based foundation model for tabular data ([Hollmann et al., *Nature* 2025](https://www.nature.com/articles/s41586-024-08328-6)). It is the best individual model in our pipeline (R² = 0.259) and carries 54.8% of the ensemble weight. **It requires a one-time authentication** with Prior Labs to download the model weights (~41 MB).
+
+#### Step 1: Create a Prior Labs account
+
+1. Go to [https://ux.priorlabs.ai/account](https://ux.priorlabs.ai/account)
+2. Register with your email (or sign in if you already have an account)
+
+#### Step 2: Accept the TabPFN licence
+
+1. Go to [https://ux.priorlabs.ai/account/licenses](https://ux.priorlabs.ai/account/licenses)
+2. Accept the TabPFN licence (free for research and non-commercial use)
+
+#### Step 3: Copy your Access Token
+
+1. On your account page, find your **Access Token** and copy it
+
+#### Step 4: Save the token locally
 
 ```bash
-# Option 1: Prior Labs token
-export TABPFN_ACCESS_TOKEN="your_token"  # Get from https://ux.priorlabs.ai/account
+# Option A: Save to config file (recommended, one-time setup)
+python -c "
+import os
+token = 'PASTE_YOUR_TOKEN_HERE'
+config_dir = os.path.expanduser('~/.tabpfn')
+os.makedirs(config_dir, exist_ok=True)
+with open(os.path.join(config_dir, 'access_token'), 'w') as f:
+    f.write(token)
+print('Token saved to', config_dir)
+"
 
-# Option 2: HuggingFace token
-export HF_TOKEN="your_hf_token"          # Get from https://huggingface.co/settings/tokens
-huggingface-cli login
+# Option B: Set as environment variable (per session)
+export TABPFN_ACCESS_TOKEN="PASTE_YOUR_TOKEN_HERE"
 ```
+
+#### Step 5: Verify it works
+
+```bash
+conda activate serum_recon
+python -c "from tabpfn import TabPFNRegressor; r = TabPFNRegressor(device='cpu'); print('TabPFN OK')"
+```
+
+The first run will download the model checkpoint. If you see `TabPFN OK`, you're ready.
+
+#### Alternative: HuggingFace authentication
+
+Older versions of TabPFN (≤0.1.11) use HuggingFace instead of Prior Labs:
+
+```bash
+pip install huggingface_hub
+huggingface-cli login  # Paste your HF token from https://huggingface.co/settings/tokens
+```
+
+You must also accept the model terms at [https://huggingface.co/Prior-Labs/tabpfn_2_5](https://huggingface.co/Prior-Labs/tabpfn_2_5) and ensure your token has **"Read access to public gated repos"** enabled.
+
+#### Skipping TabPFN
+
+If you cannot authenticate, the pipeline will still run — TabPFN will fail gracefully and the ensemble will be built from the remaining models. To skip it explicitly, comment out `run_tabpfn(); gc.collect()` near the end of `serum_reconstruction_v4.py`.
 
 ## Usage
 
