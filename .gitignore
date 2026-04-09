@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv*/
+venv*/
+env*/
+*.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data (not shared publicly)
+Data/*.xlsx
+Data/*.csv
+
+# Large model files
+*.ckpt
+*.pt
+*.pth
+*.h5
+
+# Logs
+*.log
+wandb/
+
+# Secrets
+.env
+*.token
