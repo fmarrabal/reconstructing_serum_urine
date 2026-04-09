@@ -1,7 +1,12 @@
+<p align="center">
+  <img src="logo.png" alt="Reconstructing Serum from Urine NMR" width="680"/>
+</p>
+
 # Reconstructing Serum Metabolomic Profiles from Urine NMR Data
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![DOI](https://img.shields.io/badge/DOI-pending-lightgrey)]()
 
 **Proof-of-concept for indirect clinical prediction via cross-biofluid metabolomic reconstruction.**
 

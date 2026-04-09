@@ -1,0 +1,39 @@
+<svg width="680" height="340" viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="680" height="340" rx="16" fill="#0F1729"/>
+<path d="M0 200 Q30 180 50 195 Q70 210 90 185 Q110 160 130 190 Q140 200 150 170 Q160 140 170 175 Q180 195 190 165 Q200 135 210 155 Q215 165 220 120 Q225 80 230 110 Q235 140 240 95 Q245 55 250 85 Q255 110 260 70 Q265 35 270 65 Q275 95 280 55 Q285 25 290 60 Q295 90 300 50 Q305 20 310 55 Q315 85 320 60 Q325 40 330 70 Q340 100 350 80 Q360 65 370 90 Q380 110 390 95 Q400 80 410 100 Q420 115 430 105 Q440 95 450 110 Q470 130 490 120 Q510 110 530 125 Q550 135 570 130 Q590 125 610 135 Q630 140 650 138 Q670 136 680 140" fill="none" stroke="#1E3A5F" stroke-width="1.5" opacity="0.5"/>
+<path d="M0 210 Q40 200 60 205 Q80 210 100 195 Q120 180 140 200 Q150 208 160 185 Q170 162 180 190 Q190 205 200 180 Q210 155 220 140 Q225 130 230 100 Q235 75 240 110 Q245 140 250 100 Q255 65 260 90 Q265 115 270 75 Q275 42 280 70 Q285 95 290 55 Q295 22 300 55 Q305 85 310 48 Q315 15 320 50 Q325 80 330 55 Q340 35 350 65 Q360 90 370 75 Q380 60 390 85 Q400 105 410 90 Q420 78 430 95 Q440 110 450 100 Q470 85 490 105 Q510 120 530 112 Q550 105 570 118 Q590 128 610 122 Q630 120 650 128 Q670 132 680 130" fill="none" stroke="#2A5F8F" stroke-width="1" opacity="0.3"/>
+<circle cx="175" cy="170" r="85" fill="none" stroke="#E8A838" stroke-width="2.5" opacity="0.8"/>
+<circle cx="175" cy="170" r="85" fill="#E8A838" opacity="0.08"/>
+<circle cx="175" cy="170" r="65" fill="none" stroke="#E8A838" stroke-width="0.8" opacity="0.3" stroke-dasharray="4 3"/>
+<circle cx="505" cy="170" r="85" fill="none" stroke="#C0392B" stroke-width="2.5" opacity="0.8"/>
+<circle cx="505" cy="170" r="85" fill="#C0392B" opacity="0.08"/>
+<circle cx="505" cy="170" r="65" fill="none" stroke="#C0392B" stroke-width="0.8" opacity="0.3" stroke-dasharray="4 3"/>
+<path d="M270 170 L410 170" stroke="#4ECDC4" stroke-width="2.5" stroke-dasharray="8 4" opacity="0.9"/>
+<polygon points="415,170 402,162 402,178" fill="#4ECDC4" opacity="0.9"/>
+<rect x="310" y="140" width="60" height="60" rx="4" fill="#4ECDC4" opacity="0.15" transform="rotate(45 340 170)"/>
+<rect x="310" y="140" width="60" height="60" rx="4" fill="none" stroke="#4ECDC4" stroke-width="1.5" transform="rotate(45 340 170)"/>
+<circle cx="285" cy="158" r="2.5" fill="#E8A838" opacity="0.7"/>
+<circle cx="295" cy="175" r="2" fill="#E8A838" opacity="0.5"/>
+<circle cx="305" cy="163" r="1.8" fill="#E8A838" opacity="0.6"/>
+<circle cx="375" cy="165" r="2.5" fill="#C0392B" opacity="0.7"/>
+<circle cx="385" cy="178" r="2" fill="#C0392B" opacity="0.5"/>
+<circle cx="395" cy="160" r="1.8" fill="#C0392B" opacity="0.6"/>
+<text x="175" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="500" fill="#E8A838">URINE</text>
+<text x="175" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#E8A838" opacity="0.7">NMR spectra</text>
+<text x="340" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="500" fill="#4ECDC4">ML / DL</text>
+<text x="340" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#4ECDC4" opacity="0.7">ensemble</text>
+<text x="505" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="500" fill="#C0392B">SERUM</text>
+<text x="505" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#C0392B" opacity="0.7">reconstructed</text>
+<text x="340" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="500" fill="#FFFFFF" letter-spacing="1.5">RECONSTRUCTING SERUM FROM URINE</text>
+<text x="340" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7FB3D8" letter-spacing="3">NMR METABOLOMICS</text>
+<text x="115" y="290" text-anchor="middle" font-family="monospace" font-size="22" font-weight="500" fill="#4ECDC4">0.274</text>
+<text x="115" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7FB3D8" opacity="0.7">R² ensemble</text>
+<text x="275" y="290" text-anchor="middle" font-family="monospace" font-size="22" font-weight="500" fill="#4ECDC4">80.6%</text>
+<text x="275" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7FB3D8" opacity="0.7">CSPR (F1)</text>
+<text x="415" y="290" text-anchor="middle" font-family="monospace" font-size="22" font-weight="500" fill="#4ECDC4">4.75</text>
+<text x="415" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7FB3D8" opacity="0.7">bits capacity</text>
+<text x="560" y="290" text-anchor="middle" font-family="monospace" font-size="22" font-weight="500" fill="#4ECDC4">14</text>
+<text x="560" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7FB3D8" opacity="0.7">architectures</text>
+<line x1="60" y1="262" x2="620" y2="262" stroke="#2A5F8F" stroke-width="0.5" opacity="0.5"/>
+<text x="340" y="332" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#5A7A9A" letter-spacing="2">UNIVERSIDAD DE ALMERÍA</text>
+</svg>
