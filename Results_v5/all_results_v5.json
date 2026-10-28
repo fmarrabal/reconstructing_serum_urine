@@ -1,0 +1,2570 @@
+{
+ "recon": {
+  "WeightedEnsemble": {
+   "r2_test_mean": 0.2715045946830965,
+   "r2_test_std": 0.03059971164148331,
+   "r2_train_mean": 0.4525666866688332,
+   "gap": 0.1810620919857367,
+   "mae": 0.000834679083268307,
+   "time": 0
+  },
+  "TabPFN": {
+   "r2_test_mean": 0.26311104420541076,
+   "r2_test_std": 0.039303177419917616,
+   "r2_train_mean": 0.49553755852670855,
+   "gap": 0.2324265143212978,
+   "mae": 0.0007905194512788725,
+   "time": 3025.051165819168
+  },
+  "BaggingSVR+": {
+   "r2_test_mean": 0.22583948367645826,
+   "r2_test_std": 0.0251179081718826,
+   "r2_train_mean": 0.32143039983709526,
+   "gap": 0.095590916160637,
+   "mae": 0.001008546320833679,
+   "time": 2240.968983411789
+  },
+  "StackingMeta": {
+   "r2_test_mean": 0.2062041408716821,
+   "r2_test_std": 0.0343322807247033,
+   "r2_train_mean": null,
+   "gap": null,
+   "mae": null,
+   "time": 0
+  },
+  "BaggingKNN": {
+   "r2_test_mean": 0.20059499335529601,
+   "r2_test_std": 0.04961298367897963,
+   "r2_train_mean": 0.3747248715135878,
+   "gap": 0.17412987815829178,
+   "mae": 0.0009316541235201906,
+   "time": 2022.0388040542603
+  },
+  "ExtraTrees": {
+   "r2_test_mean": 0.1583941260257018,
+   "r2_test_std": 0.015044463364985605,
+   "r2_train_mean": 0.3147424853805699,
+   "gap": 0.15634835935486813,
+   "mae": 0.0011014927979928566,
+   "time": 1681.143298149109
+  },
+  "ResidualMLP": {
+   "r2_test_mean": 0.14171346373281526,
+   "r2_test_std": 0.09048968571829231,
+   "r2_train_mean": 0.28900923311958887,
+   "gap": 0.1472957693867736,
+   "mae": 0.0009640239733262786,
+   "time": 9346.179781675339
+  },
+  "MLP_Wide": {
+   "r2_test_mean": 0.1387975358402992,
+   "r2_test_std": 0.0487630494667273,
+   "r2_train_mean": 0.31594788519366646,
+   "gap": 0.17715034935336726,
+   "mae": 0.000984990945055118,
+   "time": 6867.13227057457
+  },
+  "LightGBM": {
+   "r2_test_mean": 0.12000689810210723,
+   "r2_test_std": 0.07954463634442559,
+   "r2_train_mean": 0.27897621407587053,
+   "gap": 0.1589693159737633,
+   "mae": 0.001198931480906723,
+   "time": 2584.1327154636383
+  },
+  "MLP_Deep": {
+   "r2_test_mean": 0.11749602026066445,
+   "r2_test_std": 0.19247921396263767,
+   "r2_train_mean": 0.33806245167403837,
+   "gap": 0.2205664314133739,
+   "mae": 0.0009511331468897591,
+   "time": 4037.865152835846
+  },
+  "XGBoost": {
+   "r2_test_mean": 0.0664245953466249,
+   "r2_test_std": 0.09948070790183276,
+   "r2_train_mean": 0.2617187955990592,
+   "gap": 0.1952942002524343,
+   "mae": 0.0013810189516073712,
+   "time": 2178.20099067688
+  },
+  "TabNet": {
+   "r2_test_mean": -0.10728388995836716,
+   "r2_test_std": 0.4113459147061217,
+   "r2_train_mean": 0.3653332161225492,
+   "gap": 0.47261710608091634,
+   "mae": 0.0008734788749780563,
+   "time": 11760.411036491394
+  },
+  "1D_CNN": {
+   "r2_test_mean": -0.13814843002235483,
+   "r2_test_std": 0.361874789828571,
+   "r2_train_mean": 0.3445199691199493,
+   "gap": 0.48266839914230414,
+   "mae": 0.0009964501200766041,
+   "time": 6498.439596652985
+  },
+  "SAN_MLP": {
+   "r2_test_mean": -0.4670777028604853,
+   "r2_test_std": 0.7864178715878011,
+   "r2_train_mean": 0.3647603133259255,
+   "gap": 0.8318380161864107,
+   "mae": 0.0009922718984571714,
+   "time": 6312.0417375564575
+  },
+  "ElasticNet": {
+   "r2_test_mean": -1.6328604817124337,
+   "r2_test_std": 1.605640060919795,
+   "r2_train_mean": 0.17252779095658927,
+   "gap": 1.805388272669023,
+   "mae": 0.001530678535334952,
+   "time": 1338.317441701889
+  },
+  "Ridge": {
+   "r2_test_mean": -1.7009811065161826,
+   "r2_test_std": 1.6759663963251317,
+   "r2_train_mean": 0.13677327102912168,
+   "gap": 1.8377543775453042,
+   "mae": 0.0016593174448953363,
+   "time": 1353.7792179584503
+  },
+  "PLS": {
+   "r2_test_mean": -3.1365385688308542,
+   "r2_test_std": 3.0797100695204245,
+   "r2_train_mean": 0.2974007338108942,
+   "gap": 3.4339393026417486,
+   "mae": 0.001183512295163883,
+   "time": 1305.6943171024323
+  }
+ },
+ "ensemble": {
+  "folds": [
+   {
+    "fold": 1,
+    "candidates": [
+     "TabPFN",
+     "BaggingSVR+",
+     "BaggingKNN",
+     "ResidualMLP",
+     "ExtraTrees",
+     "LightGBM"
+    ],
+    "weights": {
+     "TabPFN": 0.6054,
+     "BaggingSVR+": 0.2445,
+     "BaggingKNN": 0.0301,
+     "ResidualMLP": 0.0456,
+     "ExtraTrees": 0.0031,
+     "LightGBM": 0.0714
+    },
+    "weight_fit_r2_other_folds": 0.2721278489042487,
+    "ensemble_r2_test": 0.290694005558168,
+    "stacking_params": {
+     "alpha": 0.7750598079304147,
+     "npc": 4,
+     "npy": 3
+    },
+    "stacking_r2_test": 0.15182249543593992
+   },
+   {
+    "fold": 2,
+    "candidates": [
+     "TabPFN",
+     "BaggingSVR+",
+     "BaggingKNN",
+     "ExtraTrees",
+     "ResidualMLP",
+     "MLP_Wide"
+    ],
+    "weights": {
+     "TabPFN": 0.5548,
+     "BaggingSVR+": 0.2596,
+     "BaggingKNN": 0.0779,
+     "ExtraTrees": 0.0004,
+     "ResidualMLP": 0.0126,
+     "MLP_Wide": 0.0947
+    },
+    "weight_fit_r2_other_folds": 0.2849479335568603,
+    "ensemble_r2_test": 0.24579942010678618,
+    "stacking_params": {
+     "alpha": 0.047438302431013386,
+     "npc": 3,
+     "npy": 3
+    },
+    "stacking_r2_test": 0.20630470514095745
+   },
+   {
+    "fold": 3,
+    "candidates": [
+     "TabPFN",
+     "BaggingSVR+",
+     "BaggingKNN",
+     "ExtraTrees",
+     "MLP_Wide",
+     "ResidualMLP"
+    ],
+    "weights": {
+     "TabPFN": 0.6526,
+     "BaggingSVR+": 0.1564,
+     "BaggingKNN": 0.117,
+     "ExtraTrees": 0.0015,
+     "MLP_Wide": 0.0714,
+     "ResidualMLP": 0.001
+    },
+    "weight_fit_r2_other_folds": 0.28938847462512013,
+    "ensemble_r2_test": 0.2256596547274459,
+    "stacking_params": {
+     "alpha": 51.01263678834622,
+     "npc": 3,
+     "npy": 3
+    },
+    "stacking_r2_test": 0.20710884589979794
+   },
+   {
+    "fold": 4,
+    "candidates": [
+     "TabPFN",
+     "BaggingSVR+",
+     "BaggingKNN",
+     "ExtraTrees",
+     "MLP_Wide",
+     "ResidualMLP"
+    ],
+    "weights": {
+     "TabPFN": 0.5415,
+     "BaggingSVR+": 0.2616,
+     "BaggingKNN": 0.0663,
+     "ExtraTrees": 0.0026,
+     "MLP_Wide": 0.1212,
+     "ResidualMLP": 0.0069
+    },
+    "weight_fit_r2_other_folds": 0.26936147525102366,
+    "ensemble_r2_test": 0.3071755236731061,
+    "stacking_params": {
+     "alpha": 69.0092996880805,
+     "npc": 4,
+     "npy": 8
+    },
+    "stacking_r2_test": 0.26037702258394624
+   },
+   {
+    "fold": 5,
+    "candidates": [
+     "TabPFN",
+     "BaggingSVR+",
+     "MLP_Deep",
+     "BaggingKNN",
+     "ResidualMLP",
+     "ExtraTrees"
+    ],
+    "weights": {
+     "TabPFN": 0.591,
+     "BaggingSVR+": 0.232,
+     "MLP_Deep": 0.0704,
+     "BaggingKNN": 0.0071,
+     "ResidualMLP": 0.0642,
+     "ExtraTrees": 0.0353
+    },
+    "weight_fit_r2_other_folds": 0.2710669989918005,
+    "ensemble_r2_test": 0.2881943693499765,
+    "stacking_params": {
+     "alpha": 0.25057642992964047,
+     "npc": 3,
+     "npy": 3
+    },
+    "stacking_r2_test": 0.20540763529776904
+   }
+  ],
+  "mean_weights": {
+   "TabPFN": 0.58906,
+   "BaggingSVR+": 0.23082,
+   "BaggingKNN": 0.05968,
+   "ResidualMLP": 0.02606,
+   "ExtraTrees": 0.008579999999999999,
+   "LightGBM": 0.014280000000000001,
+   "MLP_Wide": 0.05746,
+   "MLP_Deep": 0.01408
+  },
+  "insample_reference_r2": 0.27714829470775315
+ },
+ "best_nested": [
+  {
+   "endpoint": "COVID",
+   "input": "real",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.9531773048100913,
+   "roc_auc_mean": 0.964326530612245,
+   "pca_mode": 13
+  },
+  {
+   "endpoint": "COVID",
+   "input": "recon",
+   "classifier": "Random Forest",
+   "f1_mean": 0.6454312364504611,
+   "roc_auc_mean": 0.7446519274376416,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "urine",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.8064095456799882,
+   "roc_auc_mean": 0.8998163265306123,
+   "pca_mode": 13
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "real",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.6351912195782908,
+   "roc_auc_mean": 0.7153168044077135,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "recon",
+   "classifier": "XGBoost",
+   "f1_mean": 0.431914629468332,
+   "roc_auc_mean": 0.4012685950413223,
+   "pca_mode": 3
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "urine",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.5558893634102546,
+   "roc_auc_mean": 0.5848140495867769,
+   "pca_mode": 14
+  },
+  {
+   "endpoint": "GGT",
+   "input": "real",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.618852561917822,
+   "roc_auc_mean": 0.6581088154269973,
+   "pca_mode": 2
+  },
+  {
+   "endpoint": "GGT",
+   "input": "recon",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.5773295685613039,
+   "roc_auc_mean": 0.6189338842975206,
+   "pca_mode": 6
+  },
+  {
+   "endpoint": "GGT",
+   "input": "urine",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.6414146284729211,
+   "roc_auc_mean": 0.6594593663911845,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "HDL",
+   "input": "real",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.7164755920010779,
+   "roc_auc_mean": 0.8173168044077134,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "HDL",
+   "input": "recon",
+   "classifier": "XGBoost",
+   "f1_mean": 0.5283068949829004,
+   "roc_auc_mean": 0.5408030303030302,
+   "pca_mode": 3
+  },
+  {
+   "endpoint": "HDL",
+   "input": "urine",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.5412999215031904,
+   "roc_auc_mean": 0.5800895316804408,
+   "pca_mode": 7
+  }
+ ],
+ "cspr_clf_nested": [
+  {
+   "endpoint": "COVID",
+   "classifier": "Gradient Boosting",
+   "AUC_real": 0.9451235827664399,
+   "AUC_recon": 0.7332426303854876,
+   "CSPR_AUC": 0.775816669645717,
+   "F1_real": 0.8748321760069535,
+   "F1_recon": 0.5766994086704468,
+   "CSPR_F1": 0.6592114744826931,
+   "CPIL_F1": 0.3407885255173069
+  },
+  {
+   "endpoint": "COVID",
+   "classifier": "Logistic Regression",
+   "AUC_real": 0.964326530612245,
+   "AUC_recon": 0.6715941043083901,
+   "CSPR_AUC": 0.6964384811460067,
+   "F1_real": 0.9531773048100913,
+   "F1_recon": 0.5897200839084901,
+   "CSPR_F1": 0.6186887590929208,
+   "CPIL_F1": 0.38131124090707924
+  },
+  {
+   "endpoint": "COVID",
+   "classifier": "Random Forest",
+   "AUC_real": 0.9734761904761906,
+   "AUC_recon": 0.7446519274376416,
+   "CSPR_AUC": 0.764941078911631,
+   "F1_real": 0.9050604079030501,
+   "F1_recon": 0.6454312364504611,
+   "CSPR_F1": 0.7131360855192768,
+   "CPIL_F1": 0.28686391448072324
+  },
+  {
+   "endpoint": "COVID",
+   "classifier": "SVM",
+   "AUC_real": 0.9624965986394559,
+   "AUC_recon": 0.6762789115646258,
+   "CSPR_AUC": 0.7026299235972209,
+   "F1_real": 0.9474580935276151,
+   "F1_recon": 0.574460029554228,
+   "CSPR_F1": 0.6063170851339448,
+   "CPIL_F1": 0.3936829148660552
+  },
+  {
+   "endpoint": "COVID",
+   "classifier": "XGBoost",
+   "AUC_real": 0.9622074829931974,
+   "AUC_recon": 0.7400272108843536,
+   "CSPR_AUC": 0.7690931778895608,
+   "F1_real": 0.873153429597477,
+   "F1_recon": 0.5782702466745112,
+   "CSPR_F1": 0.662277930857001,
+   "CPIL_F1": 0.33772206914299896
+  },
+  {
+   "endpoint": "Creatinine",
+   "classifier": "Gradient Boosting",
+   "AUC_real": 0.6884848484848485,
+   "AUC_recon": 0.4099586776859504,
+   "CSPR_AUC": 0.5954505441741357,
+   "F1_real": 0.6331334347861,
+   "F1_recon": 0.4236583772779891,
+   "CSPR_F1": 0.6691454818226735,
+   "CPIL_F1": 0.3308545181773265
+  },
+  {
+   "endpoint": "Creatinine",
+   "classifier": "Logistic Regression",
+   "AUC_real": 0.7153168044077135,
+   "AUC_recon": 0.39140495867768593,
+   "CSPR_AUC": 0.5471770777170145,
+   "F1_real": 0.6351912195782908,
+   "F1_recon": 0.41754104550224824,
+   "CSPR_F1": 0.6573470045436987,
+   "CPIL_F1": 0.34265299545630135
+  },
+  {
+   "endpoint": "Creatinine",
+   "classifier": "Random Forest",
+   "AUC_real": 0.7030137741046832,
+   "AUC_recon": 0.38234573002754824,
+   "CSPR_AUC": 0.5438666269583141,
+   "F1_real": 0.6282159011448651,
+   "F1_recon": 0.39924764937081536,
+   "CSPR_F1": 0.6355261760220071,
+   "CPIL_F1": 0.3644738239779929
+  },
+  {
+   "endpoint": "Creatinine",
+   "classifier": "SVM",
+   "AUC_real": 0.7168629476584022,
+   "AUC_recon": 0.6155096418732783,
+   "CSPR_AUC": 0.8586155050750084,
+   "F1_real": 0.6341105748529698,
+   "F1_recon": 0.38381166424659235,
+   "CSPR_F1": 0.6052756088093723,
+   "CPIL_F1": 0.39472439119062774
+  },
+  {
+   "endpoint": "Creatinine",
+   "classifier": "XGBoost",
+   "AUC_real": 0.6958684573002754,
+   "AUC_recon": 0.4012685950413223,
+   "CSPR_AUC": 0.5766443224026897,
+   "F1_real": 0.6300586512904792,
+   "F1_recon": 0.431914629468332,
+   "CSPR_F1": 0.6855149573514928,
+   "CPIL_F1": 0.3144850426485072
+  },
+  {
+   "endpoint": "GGT",
+   "classifier": "Gradient Boosting",
+   "AUC_real": 0.6014648760330579,
+   "AUC_recon": 0.5872389807162535,
+   "CSPR_AUC": 0.9763479200803364,
+   "F1_real": 0.5626071571007987,
+   "F1_recon": 0.5375860844132233,
+   "CSPR_F1": 0.9555265652564521,
+   "CPIL_F1": 0.044473434743547924
+  },
+  {
+   "endpoint": "GGT",
+   "classifier": "Logistic Regression",
+   "AUC_real": 0.6581088154269973,
+   "AUC_recon": 0.6189338842975206,
+   "CSPR_AUC": 0.9404734745817696,
+   "F1_real": 0.618852561917822,
+   "F1_recon": 0.5773295685613039,
+   "CSPR_F1": 0.932903253679942,
+   "CPIL_F1": 0.06709674632005802
+  },
+  {
+   "endpoint": "GGT",
+   "classifier": "Random Forest",
+   "AUC_real": 0.5933636363636363,
+   "AUC_recon": 0.6214600550964188,
+   "CSPR_AUC": 1.0473510963782147,
+   "F1_real": 0.5534662739405665,
+   "F1_recon": 0.5714671293141393,
+   "CSPR_F1": 1.0325238523486002,
+   "CPIL_F1": -0.032523852348600224
+  },
+  {
+   "endpoint": "GGT",
+   "classifier": "SVM",
+   "AUC_real": 0.6196508264462811,
+   "AUC_recon": 0.5710482093663912,
+   "CSPR_AUC": 0.9215645085819903,
+   "F1_real": 0.6148473150528172,
+   "F1_recon": 0.5458294922367921,
+   "CSPR_F1": 0.8877480292646375,
+   "CPIL_F1": 0.11225197073536253
+  },
+  {
+   "endpoint": "GGT",
+   "classifier": "XGBoost",
+   "AUC_real": 0.5710681818181819,
+   "AUC_recon": 0.6216446280991735,
+   "CSPR_AUC": 1.088564637098087,
+   "F1_real": 0.5566692688513512,
+   "F1_recon": 0.569399706534746,
+   "CSPR_F1": 1.022868942827872,
+   "CPIL_F1": -0.022868942827872107
+  },
+  {
+   "endpoint": "HDL",
+   "classifier": "Gradient Boosting",
+   "AUC_real": 0.7239159779614325,
+   "AUC_recon": 0.5260151515151514,
+   "CSPR_AUC": 0.7266245911527257,
+   "F1_real": 0.6534406427236941,
+   "F1_recon": 0.5172717352027284,
+   "CSPR_F1": 0.7916124302379147,
+   "CPIL_F1": 0.20838756976208528
+  },
+  {
+   "endpoint": "HDL",
+   "classifier": "Logistic Regression",
+   "AUC_real": 0.8173168044077134,
+   "AUC_recon": 0.5341198347107438,
+   "CSPR_AUC": 0.6535040413096675,
+   "F1_real": 0.7164755920010779,
+   "F1_recon": 0.5065083328316738,
+   "CSPR_F1": 0.7069442957812746,
+   "CPIL_F1": 0.2930557042187254
+  },
+  {
+   "endpoint": "HDL",
+   "classifier": "Random Forest",
+   "AUC_real": 0.7727782369146006,
+   "AUC_recon": 0.5371391184573003,
+   "CSPR_AUC": 0.6950753693606662,
+   "F1_real": 0.6834985350024256,
+   "F1_recon": 0.5228930983123806,
+   "CSPR_F1": 0.7650244609676083,
+   "CPIL_F1": 0.23497553903239166
+  },
+  {
+   "endpoint": "HDL",
+   "classifier": "SVM",
+   "AUC_real": 0.8170254820936639,
+   "AUC_recon": 0.5558298898071625,
+   "CSPR_AUC": 0.6803091237531832,
+   "F1_real": 0.712095535560982,
+   "F1_recon": 0.5045604209409907,
+   "CSPR_F1": 0.708557202993139,
+   "CPIL_F1": 0.29144279700686104
+  },
+  {
+   "endpoint": "HDL",
+   "classifier": "XGBoost",
+   "AUC_real": 0.7614758953168044,
+   "AUC_recon": 0.5408030303030302,
+   "CSPR_AUC": 0.7102037420081887,
+   "F1_real": 0.6800602349664524,
+   "F1_recon": 0.5283068949829004,
+   "CSPR_F1": 0.776853090092765,
+   "CPIL_F1": 0.22314690990723496
+  }
+ ],
+ "cspr_ep_nested": [
+  {
+   "endpoint": "COVID",
+   "CSPR_AUC": 0.7417838662380272,
+   "CSPR_F1": 0.6519262670171673
+  },
+  {
+   "endpoint": "Creatinine",
+   "CSPR_AUC": 0.6243508152654325,
+   "CSPR_F1": 0.6505618457098489
+  },
+  {
+   "endpoint": "GGT",
+   "CSPR_AUC": 0.9948603273440796,
+   "CSPR_F1": 0.9663141286755007
+  },
+  {
+   "endpoint": "HDL",
+   "CSPR_AUC": 0.6931433735168862,
+   "CSPR_F1": 0.7497982960145404
+  }
+ ],
+ "cspr_overall_nested": {
+  "overall": {
+   "mean_CSPR_AUC": 0.7635345955911064,
+   "mean_CSPR_F1": 0.7546501343542642,
+   "mean_CSPR_F1_best_classifier": 0.7568461530068911
+  },
+  "per_endpoint": {
+   "CSPR_AUC": {
+    "COVID": 0.7417838662380272,
+    "Creatinine": 0.6243508152654325,
+    "GGT": 0.9948603273440796,
+    "HDL": 0.6931433735168862
+   },
+   "CSPR_F1": {
+    "COVID": 0.6519262670171673,
+    "Creatinine": 0.6505618457098489,
+    "GGT": 0.9663141286755007,
+    "HDL": 0.7497982960145404
+   }
+  },
+  "best_classifier_cspr_f1": {
+   "COVID": 0.6771365969304685,
+   "Creatinine": 0.6799757555765396,
+   "GGT": 0.932903253679942,
+   "HDL": 0.7373690058406143
+  }
+ },
+ "mean_clf_nested": [
+  {
+   "endpoint": "COVID",
+   "input": "real",
+   "roc_auc_mean": 0.9615260770975057,
+   "f1_mean": 0.9107362823690375
+  },
+  {
+   "endpoint": "COVID",
+   "input": "recon",
+   "roc_auc_mean": 0.7131589569160998,
+   "f1_mean": 0.5929162010516273
+  },
+  {
+   "endpoint": "COVID",
+   "input": "urine",
+   "roc_auc_mean": 0.8832310657596372,
+   "f1_mean": 0.7904387442680656
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "real",
+   "roc_auc_mean": 0.7039093663911846,
+   "f1_mean": 0.632141956330541
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "recon",
+   "roc_auc_mean": 0.4400975206611569,
+   "f1_mean": 0.4112346731731954
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "urine",
+   "roc_auc_mean": 0.5353497245179064,
+   "f1_mean": 0.5137524289307114
+  },
+  {
+   "endpoint": "GGT",
+   "input": "real",
+   "roc_auc_mean": 0.6087312672176309,
+   "f1_mean": 0.5812885153726711
+  },
+  {
+   "endpoint": "GGT",
+   "input": "recon",
+   "roc_auc_mean": 0.6040651515151515,
+   "f1_mean": 0.5603223962120409
+  },
+  {
+   "endpoint": "GGT",
+   "input": "urine",
+   "roc_auc_mean": 0.6477318181818182,
+   "f1_mean": 0.6256922153305035
+  },
+  {
+   "endpoint": "HDL",
+   "input": "real",
+   "roc_auc_mean": 0.778502479338843,
+   "f1_mean": 0.6891141080509264
+  },
+  {
+   "endpoint": "HDL",
+   "input": "recon",
+   "roc_auc_mean": 0.5387814049586777,
+   "f1_mean": 0.5159080964541347
+  },
+  {
+   "endpoint": "HDL",
+   "input": "urine",
+   "roc_auc_mean": 0.5430333333333334,
+   "f1_mean": 0.5187968398572943
+  }
+ ],
+ "summary_nested": [
+  {
+   "endpoint": "COVID",
+   "input": "real",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.9531773048100913,
+   "roc_auc_mean": 0.964326530612245,
+   "f1_std": 0.04922349765260402,
+   "roc_auc_std": 0.06351821189274917,
+   "pca_mode": 13
+  },
+  {
+   "endpoint": "COVID",
+   "input": "real",
+   "classifier": "Random Forest",
+   "f1_mean": 0.9050604079030501,
+   "roc_auc_mean": 0.9734761904761906,
+   "f1_std": 0.0718731596820715,
+   "roc_auc_std": 0.03289659699149461,
+   "pca_mode": 13
+  },
+  {
+   "endpoint": "COVID",
+   "input": "real",
+   "classifier": "SVM",
+   "f1_mean": 0.9474580935276151,
+   "roc_auc_mean": 0.9624965986394559,
+   "f1_std": 0.05215066193176445,
+   "roc_auc_std": 0.06450697669684657,
+   "pca_mode": 9
+  },
+  {
+   "endpoint": "COVID",
+   "input": "real",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.8748321760069535,
+   "roc_auc_mean": 0.9451235827664399,
+   "f1_std": 0.09686411385132296,
+   "roc_auc_std": 0.06416819576974153,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "COVID",
+   "input": "real",
+   "classifier": "XGBoost",
+   "f1_mean": 0.873153429597477,
+   "roc_auc_mean": 0.9622074829931974,
+   "f1_std": 0.0909610312233989,
+   "roc_auc_std": 0.04723144771049262,
+   "pca_mode": 13
+  },
+  {
+   "endpoint": "COVID",
+   "input": "recon",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.5897200839084901,
+   "roc_auc_mean": 0.6715941043083901,
+   "f1_std": 0.1012353924789611,
+   "roc_auc_std": 0.1078399373249564,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "recon",
+   "classifier": "Random Forest",
+   "f1_mean": 0.6454312364504611,
+   "roc_auc_mean": 0.7446519274376416,
+   "f1_std": 0.09247204036145786,
+   "roc_auc_std": 0.09453647836740423,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "recon",
+   "classifier": "SVM",
+   "f1_mean": 0.574460029554228,
+   "roc_auc_mean": 0.6762789115646258,
+   "f1_std": 0.1043527959919875,
+   "roc_auc_std": 0.1046897706485657,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "recon",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.5766994086704468,
+   "roc_auc_mean": 0.7332426303854876,
+   "f1_std": 0.105816770212702,
+   "roc_auc_std": 0.1153530690451655,
+   "pca_mode": 5
+  },
+  {
+   "endpoint": "COVID",
+   "input": "recon",
+   "classifier": "XGBoost",
+   "f1_mean": 0.5782702466745112,
+   "roc_auc_mean": 0.7400272108843536,
+   "f1_std": 0.1161106886956436,
+   "roc_auc_std": 0.108890064696473,
+   "pca_mode": 3
+  },
+  {
+   "endpoint": "COVID",
+   "input": "urine",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.8064095456799882,
+   "roc_auc_mean": 0.8998163265306123,
+   "f1_std": 0.08269541974258157,
+   "roc_auc_std": 0.08334583471341214,
+   "pca_mode": 13
+  },
+  {
+   "endpoint": "COVID",
+   "input": "urine",
+   "classifier": "Random Forest",
+   "f1_mean": 0.7871963476361146,
+   "roc_auc_mean": 0.8890340136054422,
+   "f1_std": 0.08795125645454999,
+   "roc_auc_std": 0.07494773358748559,
+   "pca_mode": 11
+  },
+  {
+   "endpoint": "COVID",
+   "input": "urine",
+   "classifier": "SVM",
+   "f1_mean": 0.8027261451268459,
+   "roc_auc_mean": 0.8959478458049887,
+   "f1_std": 0.09114166051471176,
+   "roc_auc_std": 0.08415715173664494,
+   "pca_mode": 11
+  },
+  {
+   "endpoint": "COVID",
+   "input": "urine",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.7768362668552292,
+   "roc_auc_mean": 0.8607335600907029,
+   "f1_std": 0.1165305423869805,
+   "roc_auc_std": 0.1052827138384936,
+   "pca_mode": 13
+  },
+  {
+   "endpoint": "COVID",
+   "input": "urine",
+   "classifier": "XGBoost",
+   "f1_mean": 0.7790254160421501,
+   "roc_auc_mean": 0.8706235827664399,
+   "f1_std": 0.09130878617061525,
+   "roc_auc_std": 0.1015587547042033,
+   "pca_mode": 13
+  },
+  {
+   "endpoint": "GGT",
+   "input": "real",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.618852561917822,
+   "roc_auc_mean": 0.6581088154269973,
+   "f1_std": 0.09447738365341242,
+   "roc_auc_std": 0.1047867828368623,
+   "pca_mode": 2
+  },
+  {
+   "endpoint": "GGT",
+   "input": "real",
+   "classifier": "Random Forest",
+   "f1_mean": 0.5534662739405665,
+   "roc_auc_mean": 0.5933636363636363,
+   "f1_std": 0.0970524001611193,
+   "roc_auc_std": 0.1051810721174509,
+   "pca_mode": 3
+  },
+  {
+   "endpoint": "GGT",
+   "input": "real",
+   "classifier": "SVM",
+   "f1_mean": 0.6148473150528172,
+   "roc_auc_mean": 0.6196508264462811,
+   "f1_std": 0.09426979489190535,
+   "roc_auc_std": 0.1468644499892177,
+   "pca_mode": 2
+  },
+  {
+   "endpoint": "GGT",
+   "input": "real",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.5626071571007987,
+   "roc_auc_mean": 0.6014648760330579,
+   "f1_std": 0.1021352929497553,
+   "roc_auc_std": 0.121831813545264,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "GGT",
+   "input": "real",
+   "classifier": "XGBoost",
+   "f1_mean": 0.5566692688513512,
+   "roc_auc_mean": 0.5710681818181819,
+   "f1_std": 0.09816735489592827,
+   "roc_auc_std": 0.1094498775499098,
+   "pca_mode": 3
+  },
+  {
+   "endpoint": "GGT",
+   "input": "recon",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.5773295685613039,
+   "roc_auc_mean": 0.6189338842975206,
+   "f1_std": 0.1084526293917401,
+   "roc_auc_std": 0.1238709468219743,
+   "pca_mode": 6
+  },
+  {
+   "endpoint": "GGT",
+   "input": "recon",
+   "classifier": "Random Forest",
+   "f1_mean": 0.5714671293141393,
+   "roc_auc_mean": 0.6214600550964188,
+   "f1_std": 0.09174477341269814,
+   "roc_auc_std": 0.1130861638375311,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "GGT",
+   "input": "recon",
+   "classifier": "SVM",
+   "f1_mean": 0.5458294922367921,
+   "roc_auc_mean": 0.5710482093663912,
+   "f1_std": 0.09275386319436286,
+   "roc_auc_std": 0.1332434165707067,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "GGT",
+   "input": "recon",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.5375860844132233,
+   "roc_auc_mean": 0.5872389807162535,
+   "f1_std": 0.09850716837323124,
+   "roc_auc_std": 0.1144758844663152,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "GGT",
+   "input": "recon",
+   "classifier": "XGBoost",
+   "f1_mean": 0.569399706534746,
+   "roc_auc_mean": 0.6216446280991735,
+   "f1_std": 0.09379827721815084,
+   "roc_auc_std": 0.1075571224980115,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "GGT",
+   "input": "urine",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.6216053450236516,
+   "roc_auc_mean": 0.632026170798898,
+   "f1_std": 0.08924110468643923,
+   "roc_auc_std": 0.09726312516258677,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "GGT",
+   "input": "urine",
+   "classifier": "Random Forest",
+   "f1_mean": 0.6258047720141542,
+   "roc_auc_mean": 0.6679834710743804,
+   "f1_std": 0.09760902591629465,
+   "roc_auc_std": 0.1126044071063608,
+   "pca_mode": 13
+  },
+  {
+   "endpoint": "GGT",
+   "input": "urine",
+   "classifier": "SVM",
+   "f1_mean": 0.6071113300886967,
+   "roc_auc_mean": 0.6090096418732782,
+   "f1_std": 0.09743275764854804,
+   "roc_auc_std": 0.1349242710103145,
+   "pca_mode": 10
+  },
+  {
+   "endpoint": "GGT",
+   "input": "urine",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.6414146284729211,
+   "roc_auc_mean": 0.6594593663911845,
+   "f1_std": 0.09350989419918176,
+   "roc_auc_std": 0.1154250034701665,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "GGT",
+   "input": "urine",
+   "classifier": "XGBoost",
+   "f1_mean": 0.6325250010530938,
+   "roc_auc_mean": 0.6701804407713499,
+   "f1_std": 0.1147408332390153,
+   "roc_auc_std": 0.1053362188892818,
+   "pca_mode": 13
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "real",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.6351912195782908,
+   "roc_auc_mean": 0.7153168044077135,
+   "f1_std": 0.1004818295573306,
+   "roc_auc_std": 0.09163118016332408,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "real",
+   "classifier": "Random Forest",
+   "f1_mean": 0.6282159011448651,
+   "roc_auc_mean": 0.7030137741046832,
+   "f1_std": 0.1078853618693136,
+   "roc_auc_std": 0.1003495858609437,
+   "pca_mode": 13
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "real",
+   "classifier": "SVM",
+   "f1_mean": 0.6341105748529698,
+   "roc_auc_mean": 0.7168629476584022,
+   "f1_std": 0.0900004759654444,
+   "roc_auc_std": 0.08750993094049758,
+   "pca_mode": 5
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "real",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.6331334347861,
+   "roc_auc_mean": 0.6884848484848485,
+   "f1_std": 0.09967286667766002,
+   "roc_auc_std": 0.08922412452994885,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "real",
+   "classifier": "XGBoost",
+   "f1_mean": 0.6300586512904792,
+   "roc_auc_mean": 0.6958684573002754,
+   "f1_std": 0.1034187664518338,
+   "roc_auc_std": 0.1162907126842589,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "recon",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.4175410455022482,
+   "roc_auc_mean": 0.3914049586776859,
+   "f1_std": 0.08829077270672192,
+   "roc_auc_std": 0.0998066362095073,
+   "pca_mode": 2
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "recon",
+   "classifier": "Random Forest",
+   "f1_mean": 0.3992476493708154,
+   "roc_auc_mean": 0.3823457300275482,
+   "f1_std": 0.09007021403376797,
+   "roc_auc_std": 0.1011248340565228,
+   "pca_mode": 2
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "recon",
+   "classifier": "SVM",
+   "f1_mean": 0.3838116642465924,
+   "roc_auc_mean": 0.6155096418732783,
+   "f1_std": 0.08603625035164428,
+   "roc_auc_std": 0.1291388394328816,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "recon",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.4236583772779891,
+   "roc_auc_mean": 0.4099586776859504,
+   "f1_std": 0.09224824219093558,
+   "roc_auc_std": 0.1042783274931102,
+   "pca_mode": 3
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "recon",
+   "classifier": "XGBoost",
+   "f1_mean": 0.431914629468332,
+   "roc_auc_mean": 0.4012685950413223,
+   "f1_std": 0.09137175985406762,
+   "roc_auc_std": 0.1030216434363548,
+   "pca_mode": 3
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "urine",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.5558893634102546,
+   "roc_auc_mean": 0.5848140495867769,
+   "f1_std": 0.1138424826479169,
+   "roc_auc_std": 0.1270751044333664,
+   "pca_mode": 14
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "urine",
+   "classifier": "Random Forest",
+   "f1_mean": 0.5096964037881735,
+   "roc_auc_mean": 0.5101584022038568,
+   "f1_std": 0.09650007050449173,
+   "roc_auc_std": 0.1097345748507572,
+   "pca_mode": 13
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "urine",
+   "classifier": "SVM",
+   "f1_mean": 0.4839864293870434,
+   "roc_auc_mean": 0.5409097796143251,
+   "f1_std": 0.1103875576621053,
+   "roc_auc_std": 0.1324228793605716,
+   "pca_mode": 11
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "urine",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.5097893768907666,
+   "roc_auc_mean": 0.517900826446281,
+   "f1_std": 0.09799487839745805,
+   "roc_auc_std": 0.1160823831358105,
+   "pca_mode": 13
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "urine",
+   "classifier": "XGBoost",
+   "f1_mean": 0.5094005711773191,
+   "roc_auc_mean": 0.522965564738292,
+   "f1_std": 0.0953496104239987,
+   "roc_auc_std": 0.1120488028688076,
+   "pca_mode": 5
+  },
+  {
+   "endpoint": "HDL",
+   "input": "real",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.7164755920010779,
+   "roc_auc_mean": 0.8173168044077134,
+   "f1_std": 0.1060051651422315,
+   "roc_auc_std": 0.09326041697668634,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "HDL",
+   "input": "real",
+   "classifier": "Random Forest",
+   "f1_mean": 0.6834985350024256,
+   "roc_auc_mean": 0.7727782369146006,
+   "f1_std": 0.08802073089091625,
+   "roc_auc_std": 0.08823714665600059,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "HDL",
+   "input": "real",
+   "classifier": "SVM",
+   "f1_mean": 0.712095535560982,
+   "roc_auc_mean": 0.8170254820936639,
+   "f1_std": 0.09259743357959865,
+   "roc_auc_std": 0.0867005195518708,
+   "pca_mode": 11
+  },
+  {
+   "endpoint": "HDL",
+   "input": "real",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.6534406427236941,
+   "roc_auc_mean": 0.7239159779614325,
+   "f1_std": 0.09867760314642673,
+   "roc_auc_std": 0.1058846996259077,
+   "pca_mode": 11
+  },
+  {
+   "endpoint": "HDL",
+   "input": "real",
+   "classifier": "XGBoost",
+   "f1_mean": 0.6800602349664524,
+   "roc_auc_mean": 0.7614758953168044,
+   "f1_std": 0.09371594699909518,
+   "roc_auc_std": 0.09738117134669683,
+   "pca_mode": 11
+  },
+  {
+   "endpoint": "HDL",
+   "input": "recon",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.5065083328316738,
+   "roc_auc_mean": 0.5341198347107438,
+   "f1_std": 0.110539263180923,
+   "roc_auc_std": 0.1385612597041706,
+   "pca_mode": 10
+  },
+  {
+   "endpoint": "HDL",
+   "input": "recon",
+   "classifier": "Random Forest",
+   "f1_mean": 0.5228930983123806,
+   "roc_auc_mean": 0.5371391184573003,
+   "f1_std": 0.1034777682686409,
+   "roc_auc_std": 0.1189046596510115,
+   "pca_mode": 11
+  },
+  {
+   "endpoint": "HDL",
+   "input": "recon",
+   "classifier": "SVM",
+   "f1_mean": 0.5045604209409907,
+   "roc_auc_mean": 0.5558298898071625,
+   "f1_std": 0.1143810609055388,
+   "roc_auc_std": 0.122849915560834,
+   "pca_mode": 10
+  },
+  {
+   "endpoint": "HDL",
+   "input": "recon",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.5172717352027284,
+   "roc_auc_mean": 0.5260151515151514,
+   "f1_std": 0.07601477668318357,
+   "roc_auc_std": 0.08982583770179213,
+   "pca_mode": 3
+  },
+  {
+   "endpoint": "HDL",
+   "input": "recon",
+   "classifier": "XGBoost",
+   "f1_mean": 0.5283068949829004,
+   "roc_auc_mean": 0.5408030303030302,
+   "f1_std": 0.1075256970660611,
+   "roc_auc_std": 0.1211597208595687,
+   "pca_mode": 3
+  },
+  {
+   "endpoint": "HDL",
+   "input": "urine",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.5412999215031904,
+   "roc_auc_mean": 0.5800895316804408,
+   "f1_std": 0.1202344945584902,
+   "roc_auc_std": 0.1237057924465649,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "HDL",
+   "input": "urine",
+   "classifier": "Random Forest",
+   "f1_mean": 0.5301867245329618,
+   "roc_auc_mean": 0.5414793388429753,
+   "f1_std": 0.1065358208090131,
+   "roc_auc_std": 0.1094285678449374,
+   "pca_mode": 2
+  },
+  {
+   "endpoint": "HDL",
+   "input": "urine",
+   "classifier": "SVM",
+   "f1_mean": 0.5121122740040814,
+   "roc_auc_mean": 0.5496694214876033,
+   "f1_std": 0.1029215255665946,
+   "roc_auc_std": 0.1176420299467773,
+   "pca_mode": 7
+  },
+  {
+   "endpoint": "HDL",
+   "input": "urine",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.5087987578560352,
+   "roc_auc_mean": 0.5262623966942149,
+   "f1_std": 0.1054684839906612,
+   "roc_auc_std": 0.1198413646927694,
+   "pca_mode": 13
+  },
+  {
+   "endpoint": "HDL",
+   "input": "urine",
+   "classifier": "XGBoost",
+   "f1_mean": 0.5015865213902027,
+   "roc_auc_mean": 0.5176659779614324,
+   "f1_std": 0.08435859235059584,
+   "roc_auc_std": 0.1195470652337656,
+   "pca_mode": 8
+  }
+ ],
+ "info_nested": {
+  "ite_global": 0.09586783507071697,
+  "ite_per_comp": [
+   0.1975054761698503,
+   0.002328269196769959,
+   0.015578137895633917,
+   0.02442903232782172,
+   0.05097248679228103,
+   0.013171746753822513,
+   0.027531765744253336,
+   0.013594990841624433,
+   0.062301453201895014,
+   0.017689409136364805
+  ],
+  "total_capacity_bits": 4.649678144190431,
+  "snr_per_comp": [
+   3.2067994262801784,
+   0.7935709779976586,
+   0.8314112527664768,
+   0.7457453003224507,
+   0.6878206646542397,
+   0.7437229289319816,
+   0.7557039285690628,
+   0.674556778840064,
+   0.7133173503171573,
+   0.7617947024320001
+  ],
+  "capacity_per_comp": [
+   1.0363615171340395,
+   0.42141741950555234,
+   0.4364778960335185,
+   0.40192154444195277,
+   0.37758081103953217,
+   0.4010854097329214,
+   0.4060247889519049,
+   0.3718896470137274,
+   0.3883962001488832,
+   0.4085229101883988
+  ],
+  "avg_cspr_auc": 0.7635345955911064,
+  "avg_cspr_f1": 0.7546501343542644,
+  "top_bins": [
+   179,
+   99,
+   103,
+   102,
+   100,
+   104,
+   183,
+   182,
+   101,
+   144
+  ]
+ },
+ "best_fixed": [
+  {
+   "endpoint": "COVID",
+   "input": "real",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.761370204197038,
+   "roc_auc_mean": 0.8525895691609978,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "recon",
+   "classifier": "Random Forest",
+   "f1_mean": 0.6453468623822565,
+   "roc_auc_mean": 0.74947052154195,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "urine",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.6447839695657255,
+   "roc_auc_mean": 0.7366712018140589,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "real",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.56780619281208,
+   "roc_auc_mean": 0.6064090909090908,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "recon",
+   "classifier": "XGBoost",
+   "f1_mean": 0.455583672986678,
+   "roc_auc_mean": 0.4372438016528926,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "urine",
+   "classifier": "XGBoost",
+   "f1_mean": 0.5224901105401151,
+   "roc_auc_mean": 0.5346790633608817,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "real",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.5955274998698474,
+   "roc_auc_mean": 0.6500165289256197,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "recon",
+   "classifier": "Random Forest",
+   "f1_mean": 0.5287153789825382,
+   "roc_auc_mean": 0.5475323691460056,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "urine",
+   "classifier": "SVM",
+   "f1_mean": 0.5615491352204126,
+   "roc_auc_mean": 0.4394104683195592,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "real",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.6581665868110343,
+   "roc_auc_mean": 0.7301721763085399,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "recon",
+   "classifier": "Random Forest",
+   "f1_mean": 0.5365304224584025,
+   "roc_auc_mean": 0.5582190082644629,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "urine",
+   "classifier": "SVM",
+   "f1_mean": 0.5216312223975418,
+   "roc_auc_mean": 0.4509125344352617,
+   "pca_mode": 4
+  }
+ ],
+ "cspr_clf_fixed": [
+  {
+   "endpoint": "COVID",
+   "classifier": "Gradient Boosting",
+   "AUC_real": 0.8525895691609978,
+   "AUC_recon": 0.7603673469387754,
+   "CSPR_AUC": 0.8918328049532966,
+   "F1_real": 0.761370204197038,
+   "F1_recon": 0.624686437180262,
+   "CSPR_F1": 0.8204766009185682,
+   "CPIL_F1": 0.17952339908143178
+  },
+  {
+   "endpoint": "COVID",
+   "classifier": "Logistic Regression",
+   "AUC_real": 0.8144920634920635,
+   "AUC_recon": 0.7025487528344674,
+   "CSPR_AUC": 0.8625605875425613,
+   "F1_real": 0.7515942375660924,
+   "F1_recon": 0.6275723815190803,
+   "CSPR_F1": 0.8349882824426178,
+   "CPIL_F1": 0.1650117175573822
+  },
+  {
+   "endpoint": "COVID",
+   "classifier": "Random Forest",
+   "AUC_real": 0.8583344671201816,
+   "AUC_recon": 0.74947052154195,
+   "CSPR_AUC": 0.8731683862778067,
+   "F1_real": 0.7606017584795808,
+   "F1_recon": 0.6453468623822565,
+   "CSPR_F1": 0.8484688014293903,
+   "CPIL_F1": 0.1515311985706097
+  },
+  {
+   "endpoint": "COVID",
+   "classifier": "SVM",
+   "AUC_real": 0.85259410430839,
+   "AUC_recon": 0.5065895691609977,
+   "CSPR_AUC": 0.5941743751230073,
+   "F1_real": 0.7511975777602297,
+   "F1_recon": 0.5759743308486114,
+   "CSPR_F1": 0.7667414644306177,
+   "CPIL_F1": 0.23325853556938225
+  },
+  {
+   "endpoint": "COVID",
+   "classifier": "XGBoost",
+   "AUC_real": 0.8331371882086168,
+   "AUC_recon": 0.7432607709750566,
+   "CSPR_AUC": 0.892122907840893,
+   "F1_real": 0.7499344286188001,
+   "F1_recon": 0.6147571374708569,
+   "CSPR_F1": 0.8197478526263857,
+   "CPIL_F1": 0.18025214737361428
+  },
+  {
+   "endpoint": "Creatinine",
+   "classifier": "Gradient Boosting",
+   "AUC_real": 0.5345247933884297,
+   "AUC_recon": 0.40232988980716256,
+   "CSPR_AUC": 0.7526870498498963,
+   "F1_real": 0.5243215336656524,
+   "F1_recon": 0.4217314812898787,
+   "CSPR_F1": 0.8043375185097911,
+   "CPIL_F1": 0.19566248149020893
+  },
+  {
+   "endpoint": "Creatinine",
+   "classifier": "Logistic Regression",
+   "AUC_real": 0.6064090909090908,
+   "AUC_recon": 0.377823691460055,
+   "CSPR_AUC": 0.6230508366780011,
+   "F1_real": 0.56780619281208,
+   "F1_recon": 0.4041115898575939,
+   "CSPR_F1": 0.7117069080494123,
+   "CPIL_F1": 0.2882930919505877
+  },
+  {
+   "endpoint": "Creatinine",
+   "classifier": "Random Forest",
+   "AUC_real": 0.5588154269972452,
+   "AUC_recon": 0.4125895316804408,
+   "CSPR_AUC": 0.7383288143948732,
+   "F1_real": 0.5325899214475669,
+   "F1_recon": 0.43476487659911983,
+   "CSPR_F1": 0.8163220126611467,
+   "CPIL_F1": 0.18367798733885332
+  },
+  {
+   "endpoint": "Creatinine",
+   "classifier": "SVM",
+   "AUC_real": 0.5029531680440772,
+   "AUC_recon": 0.6273333333333333,
+   "CSPR_AUC": 1.2472996954626119,
+   "F1_real": 0.5401997700817965,
+   "F1_recon": 0.3834353789642339,
+   "CSPR_F1": 0.70980292884274,
+   "CPIL_F1": 0.29019707115726
+  },
+  {
+   "endpoint": "Creatinine",
+   "classifier": "XGBoost",
+   "AUC_real": 0.557228650137741,
+   "AUC_recon": 0.43724380165289256,
+   "CSPR_AUC": 0.7846757368717681,
+   "F1_real": 0.5171231683292055,
+   "F1_recon": 0.45558367298667796,
+   "CSPR_F1": 0.8809964451189491,
+   "CPIL_F1": 0.11900355488105085
+  },
+  {
+   "endpoint": "GGT",
+   "classifier": "Gradient Boosting",
+   "AUC_real": 0.5467988980716253,
+   "AUC_recon": 0.5284449035812672,
+   "CSPR_AUC": 0.9664337390673492,
+   "F1_real": 0.5275824000920125,
+   "F1_recon": 0.5105699578149955,
+   "CSPR_F1": 0.9677539617052237,
+   "CPIL_F1": 0.03224603829477635
+  },
+  {
+   "endpoint": "GGT",
+   "classifier": "Logistic Regression",
+   "AUC_real": 0.6500165289256197,
+   "AUC_recon": 0.513724517906336,
+   "CSPR_AUC": 0.7903253148892166,
+   "F1_real": 0.5955274998698474,
+   "F1_recon": 0.5106889921978444,
+   "CSPR_F1": 0.8575405708543358,
+   "CPIL_F1": 0.14245942914566423
+  },
+  {
+   "endpoint": "GGT",
+   "classifier": "Random Forest",
+   "AUC_real": 0.5567926997245178,
+   "AUC_recon": 0.5475323691460056,
+   "CSPR_AUC": 0.9833684411036747,
+   "F1_real": 0.5403823433228603,
+   "F1_recon": 0.5287153789825382,
+   "CSPR_F1": 0.9784097972769042,
+   "CPIL_F1": 0.021590202723095753
+  },
+  {
+   "endpoint": "GGT",
+   "classifier": "SVM",
+   "AUC_real": 0.551431129476584,
+   "AUC_recon": 0.4329338842975207,
+   "CSPR_AUC": 0.7851096195973913,
+   "F1_real": 0.5944703528309246,
+   "F1_recon": 0.4941526885358811,
+   "CSPR_F1": 0.8312486672929589,
+   "CPIL_F1": 0.16875133270704112
+  },
+  {
+   "endpoint": "GGT",
+   "classifier": "XGBoost",
+   "AUC_real": 0.5401942148760331,
+   "AUC_recon": 0.5621756198347106,
+   "CSPR_AUC": 1.0406916704276847,
+   "F1_real": 0.5244061077813096,
+   "F1_recon": 0.526306897368627,
+   "CSPR_F1": 1.0036246518854621,
+   "CPIL_F1": -0.003624651885462127
+  },
+  {
+   "endpoint": "HDL",
+   "classifier": "Gradient Boosting",
+   "AUC_real": 0.6415440771349863,
+   "AUC_recon": 0.5398911845730028,
+   "CSPR_AUC": 0.8415496359720972,
+   "F1_real": 0.607022167727229,
+   "F1_recon": 0.5230738309008062,
+   "CSPR_F1": 0.8617046604068244,
+   "CPIL_F1": 0.13829533959317564
+  },
+  {
+   "endpoint": "HDL",
+   "classifier": "Logistic Regression",
+   "AUC_real": 0.7301721763085399,
+   "AUC_recon": 0.5128360881542701,
+   "CSPR_AUC": 0.7023495345261789,
+   "F1_real": 0.6581665868110343,
+   "F1_recon": 0.5005031295365865,
+   "CSPR_F1": 0.7604505296472692,
+   "CPIL_F1": 0.23954947035273078
+  },
+  {
+   "endpoint": "HDL",
+   "classifier": "Random Forest",
+   "AUC_real": 0.6355881542699724,
+   "AUC_recon": 0.5582190082644629,
+   "CSPR_AUC": 0.8782715733675456,
+   "F1_real": 0.5844528599751107,
+   "F1_recon": 0.5365304224584025,
+   "CSPR_F1": 0.9180046145744776,
+   "CPIL_F1": 0.08199538542552243
+  },
+  {
+   "endpoint": "HDL",
+   "classifier": "SVM",
+   "AUC_real": 0.7106769972451791,
+   "AUC_recon": 0.47210674931129476,
+   "CSPR_AUC": 0.6643056566363311,
+   "F1_real": 0.6408889065845588,
+   "F1_recon": 0.48177305594909986,
+   "CSPR_F1": 0.7517263148094994,
+   "CPIL_F1": 0.24827368519050064
+  },
+  {
+   "endpoint": "HDL",
+   "classifier": "XGBoost",
+   "AUC_real": 0.6075289256198346,
+   "AUC_recon": 0.5521363636363636,
+   "CSPR_AUC": 0.9088231693215982,
+   "F1_real": 0.5643229682277159,
+   "F1_recon": 0.5190114139835516,
+   "CSPR_F1": 0.9197063440701918,
+   "CPIL_F1": 0.0802936559298082
+  }
+ ],
+ "cspr_ep_fixed": [
+  {
+   "endpoint": "COVID",
+   "CSPR_AUC": 0.822771812347513,
+   "CSPR_F1": 0.818084600369516
+  },
+  {
+   "endpoint": "Creatinine",
+   "CSPR_AUC": 0.8292084266514301,
+   "CSPR_F1": 0.7846331626364078
+  },
+  {
+   "endpoint": "GGT",
+   "CSPR_AUC": 0.9131857570170633,
+   "CSPR_F1": 0.927715529802977
+  },
+  {
+   "endpoint": "HDL",
+   "CSPR_AUC": 0.7990599139647503,
+   "CSPR_F1": 0.8423184927016525
+  }
+ ],
+ "cspr_overall_fixed": {
+  "overall": {
+   "mean_CSPR_AUC": 0.8410564774951892,
+   "mean_CSPR_F1": 0.8431879463776384,
+   "mean_CSPR_F1_best_classifier": 0.8382424327651551
+  },
+  "per_endpoint": {
+   "CSPR_AUC": {
+    "COVID": 0.822771812347513,
+    "Creatinine": 0.8292084266514301,
+    "GGT": 0.9131857570170633,
+    "HDL": 0.7990599139647503
+   },
+   "CSPR_F1": {
+    "COVID": 0.818084600369516,
+    "Creatinine": 0.7846331626364078,
+    "GGT": 0.927715529802977,
+    "HDL": 0.8423184927016525
+   }
+  },
+  "best_classifier_cspr_f1": {
+   "COVID": 0.8476124476960023,
+   "Creatinine": 0.8023577036565661,
+   "GGT": 0.887810183573536,
+   "HDL": 0.8151893961345159
+  }
+ },
+ "mean_clf_fixed": [
+  {
+   "endpoint": "COVID",
+   "input": "real",
+   "roc_auc_mean": 0.84222947845805,
+   "f1_mean": 0.7549396413243482
+  },
+  {
+   "endpoint": "COVID",
+   "input": "recon",
+   "roc_auc_mean": 0.6924473922902494,
+   "f1_mean": 0.6176674298802134
+  },
+  {
+   "endpoint": "COVID",
+   "input": "urine",
+   "roc_auc_mean": 0.6334662131519274,
+   "f1_mean": 0.5944126815554502
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "real",
+   "roc_auc_mean": 0.5519862258953168,
+   "f1_mean": 0.5364081172672602
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "recon",
+   "roc_auc_mean": 0.4514640495867769,
+   "f1_mean": 0.41992539993950084
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "urine",
+   "roc_auc_mean": 0.5254601928374656,
+   "f1_mean": 0.4871322071976304
+  },
+  {
+   "endpoint": "GGT",
+   "input": "real",
+   "roc_auc_mean": 0.569046694214876,
+   "f1_mean": 0.5564737407793909
+  },
+  {
+   "endpoint": "GGT",
+   "input": "recon",
+   "roc_auc_mean": 0.5169622589531679,
+   "f1_mean": 0.5140867829799772
+  },
+  {
+   "endpoint": "GGT",
+   "input": "urine",
+   "roc_auc_mean": 0.5028348484848484,
+   "f1_mean": 0.5187914356216605
+  },
+  {
+   "endpoint": "HDL",
+   "input": "real",
+   "roc_auc_mean": 0.6651020661157026,
+   "f1_mean": 0.6109706978651297
+  },
+  {
+   "endpoint": "HDL",
+   "input": "recon",
+   "roc_auc_mean": 0.5270378787878789,
+   "f1_mean": 0.5121783705656894
+  },
+  {
+   "endpoint": "HDL",
+   "input": "urine",
+   "roc_auc_mean": 0.5265017906336088,
+   "f1_mean": 0.5142280754483959
+  }
+ ],
+ "summary_fixed": [
+  {
+   "endpoint": "COVID",
+   "input": "real",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.7515942375660924,
+   "roc_auc_mean": 0.8144920634920635,
+   "f1_std": 0.1516305616291261,
+   "roc_auc_std": 0.1206747620662692,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "real",
+   "classifier": "Random Forest",
+   "f1_mean": 0.7606017584795808,
+   "roc_auc_mean": 0.8583344671201816,
+   "f1_std": 0.1025929370161339,
+   "roc_auc_std": 0.1036184927655698,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "real",
+   "classifier": "SVM",
+   "f1_mean": 0.7511975777602297,
+   "roc_auc_mean": 0.85259410430839,
+   "f1_std": 0.1070306574932426,
+   "roc_auc_std": 0.09632770365333447,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "real",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.761370204197038,
+   "roc_auc_mean": 0.8525895691609978,
+   "f1_std": 0.1022667714465025,
+   "roc_auc_std": 0.09950215674300385,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "real",
+   "classifier": "XGBoost",
+   "f1_mean": 0.7499344286188001,
+   "roc_auc_mean": 0.8331371882086168,
+   "f1_std": 0.1207276240935954,
+   "roc_auc_std": 0.1084026278365467,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "recon",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.6275723815190803,
+   "roc_auc_mean": 0.7025487528344674,
+   "f1_std": 0.1083869232069362,
+   "roc_auc_std": 0.1068957583788892,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "recon",
+   "classifier": "Random Forest",
+   "f1_mean": 0.6453468623822565,
+   "roc_auc_mean": 0.74947052154195,
+   "f1_std": 0.09801077889193789,
+   "roc_auc_std": 0.08805511522194616,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "recon",
+   "classifier": "SVM",
+   "f1_mean": 0.5759743308486114,
+   "roc_auc_mean": 0.5065895691609977,
+   "f1_std": 0.09150343209579838,
+   "roc_auc_std": 0.190793446688479,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "recon",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.624686437180262,
+   "roc_auc_mean": 0.7603673469387754,
+   "f1_std": 0.1106814079451855,
+   "roc_auc_std": 0.106339498858407,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "recon",
+   "classifier": "XGBoost",
+   "f1_mean": 0.6147571374708569,
+   "roc_auc_mean": 0.7432607709750566,
+   "f1_std": 0.1101795569303997,
+   "roc_auc_std": 0.1018976277454018,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "urine",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.6447839695657255,
+   "roc_auc_mean": 0.7366712018140589,
+   "f1_std": 0.09097507892122009,
+   "roc_auc_std": 0.1067781726834406,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "urine",
+   "classifier": "Random Forest",
+   "f1_mean": 0.6169292649943332,
+   "roc_auc_mean": 0.6939285714285713,
+   "f1_std": 0.08375511319488153,
+   "roc_auc_std": 0.09776895942626776,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "urine",
+   "classifier": "SVM",
+   "f1_mean": 0.5247684504424845,
+   "roc_auc_mean": 0.3956213151927438,
+   "f1_std": 0.07631347181840518,
+   "roc_auc_std": 0.154381908062028,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "urine",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.5861510322739777,
+   "roc_auc_mean": 0.6721031746031747,
+   "f1_std": 0.113931481509937,
+   "roc_auc_std": 0.1053765153738758,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "COVID",
+   "input": "urine",
+   "classifier": "XGBoost",
+   "f1_mean": 0.5994306905007303,
+   "roc_auc_mean": 0.6690068027210886,
+   "f1_std": 0.09955568165721126,
+   "roc_auc_std": 0.1099672424726576,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "real",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.5955274998698474,
+   "roc_auc_mean": 0.6500165289256197,
+   "f1_std": 0.1038492228970889,
+   "roc_auc_std": 0.1148724775405694,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "real",
+   "classifier": "Random Forest",
+   "f1_mean": 0.5403823433228603,
+   "roc_auc_mean": 0.5567926997245178,
+   "f1_std": 0.1052611234333716,
+   "roc_auc_std": 0.1231062788665517,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "real",
+   "classifier": "SVM",
+   "f1_mean": 0.5944703528309246,
+   "roc_auc_mean": 0.551431129476584,
+   "f1_std": 0.09034428410410365,
+   "roc_auc_std": 0.1353126594668577,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "real",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.5275824000920125,
+   "roc_auc_mean": 0.5467988980716253,
+   "f1_std": 0.1083112864977458,
+   "roc_auc_std": 0.1185071336824791,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "real",
+   "classifier": "XGBoost",
+   "f1_mean": 0.5244061077813096,
+   "roc_auc_mean": 0.5401942148760331,
+   "f1_std": 0.1024010414702279,
+   "roc_auc_std": 0.117037444386055,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "recon",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.5106889921978444,
+   "roc_auc_mean": 0.513724517906336,
+   "f1_std": 0.1011636640931208,
+   "roc_auc_std": 0.1116964808286555,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "recon",
+   "classifier": "Random Forest",
+   "f1_mean": 0.5287153789825382,
+   "roc_auc_mean": 0.5475323691460056,
+   "f1_std": 0.08953132834495398,
+   "roc_auc_std": 0.08846989132379295,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "recon",
+   "classifier": "SVM",
+   "f1_mean": 0.4941526885358811,
+   "roc_auc_mean": 0.4329338842975207,
+   "f1_std": 0.09390450316071262,
+   "roc_auc_std": 0.09684036244221801,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "recon",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.5105699578149955,
+   "roc_auc_mean": 0.5284449035812672,
+   "f1_std": 0.08887372926407418,
+   "roc_auc_std": 0.09444102446504898,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "recon",
+   "classifier": "XGBoost",
+   "f1_mean": 0.526306897368627,
+   "roc_auc_mean": 0.5621756198347106,
+   "f1_std": 0.1130296935872531,
+   "roc_auc_std": 0.1037482205271421,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "urine",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.5598654669761934,
+   "roc_auc_mean": 0.5655578512396694,
+   "f1_std": 0.06608814261875068,
+   "roc_auc_std": 0.08241959563040362,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "urine",
+   "classifier": "Random Forest",
+   "f1_mean": 0.5011206191035016,
+   "roc_auc_mean": 0.5005365013774106,
+   "f1_std": 0.1010635759380695,
+   "roc_auc_std": 0.1040347579702284,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "urine",
+   "classifier": "SVM",
+   "f1_mean": 0.5615491352204126,
+   "roc_auc_mean": 0.4394104683195592,
+   "f1_std": 0.08105165196034213,
+   "roc_auc_std": 0.08875963400974848,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "urine",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.4798466748333668,
+   "roc_auc_mean": 0.5011673553719007,
+   "f1_std": 0.09097530332978997,
+   "roc_auc_std": 0.1013706705830463,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "GGT",
+   "input": "urine",
+   "classifier": "XGBoost",
+   "f1_mean": 0.4915752819748285,
+   "roc_auc_mean": 0.5075020661157024,
+   "f1_std": 0.09752821653155186,
+   "roc_auc_std": 0.1042721317722951,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "real",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.56780619281208,
+   "roc_auc_mean": 0.6064090909090908,
+   "f1_std": 0.08530976066820056,
+   "roc_auc_std": 0.09747350168514768,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "real",
+   "classifier": "Random Forest",
+   "f1_mean": 0.5325899214475669,
+   "roc_auc_mean": 0.5588154269972452,
+   "f1_std": 0.08985048247344084,
+   "roc_auc_std": 0.08509529392188249,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "real",
+   "classifier": "SVM",
+   "f1_mean": 0.5401997700817965,
+   "roc_auc_mean": 0.5029531680440772,
+   "f1_std": 0.07187955503803894,
+   "roc_auc_std": 0.1080735573002746,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "real",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.5243215336656524,
+   "roc_auc_mean": 0.5345247933884297,
+   "f1_std": 0.09684729440819792,
+   "roc_auc_std": 0.1035679354052561,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "real",
+   "classifier": "XGBoost",
+   "f1_mean": 0.5171231683292055,
+   "roc_auc_mean": 0.557228650137741,
+   "f1_std": 0.08708607324041741,
+   "roc_auc_std": 0.1024528505700127,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "recon",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.4041115898575939,
+   "roc_auc_mean": 0.377823691460055,
+   "f1_std": 0.08528556022601168,
+   "roc_auc_std": 0.09691382239746221,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "recon",
+   "classifier": "Random Forest",
+   "f1_mean": 0.4347648765991198,
+   "roc_auc_mean": 0.4125895316804408,
+   "f1_std": 0.09538644365833591,
+   "roc_auc_std": 0.09980953727590221,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "recon",
+   "classifier": "SVM",
+   "f1_mean": 0.3834353789642339,
+   "roc_auc_mean": 0.6273333333333333,
+   "f1_std": 0.06735854810462635,
+   "roc_auc_std": 0.09247991093049338,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "recon",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.4217314812898787,
+   "roc_auc_mean": 0.4023298898071626,
+   "f1_std": 0.09276473512290036,
+   "roc_auc_std": 0.09670498383237815,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "recon",
+   "classifier": "XGBoost",
+   "f1_mean": 0.455583672986678,
+   "roc_auc_mean": 0.4372438016528926,
+   "f1_std": 0.1004224126535722,
+   "roc_auc_std": 0.1054275229920486,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "urine",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.5089161647614078,
+   "roc_auc_mean": 0.5178030303030303,
+   "f1_std": 0.1038038469666471,
+   "roc_auc_std": 0.1164002329896987,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "urine",
+   "classifier": "Random Forest",
+   "f1_mean": 0.5009237964838987,
+   "roc_auc_mean": 0.5076556473829201,
+   "f1_std": 0.09104964157604084,
+   "roc_auc_std": 0.1161325575946378,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "urine",
+   "classifier": "SVM",
+   "f1_mean": 0.4072896639094414,
+   "roc_auc_mean": 0.5639125344352618,
+   "f1_std": 0.08015198521238888,
+   "roc_auc_std": 0.1165132629131946,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "urine",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.496041300293289,
+   "roc_auc_mean": 0.5032506887052343,
+   "f1_std": 0.1212061522570858,
+   "roc_auc_std": 0.133028489200365,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "Creatinine",
+   "input": "urine",
+   "classifier": "XGBoost",
+   "f1_mean": 0.5224901105401151,
+   "roc_auc_mean": 0.5346790633608817,
+   "f1_std": 0.1020380714428759,
+   "roc_auc_std": 0.1140816242575261,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "real",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.6581665868110343,
+   "roc_auc_mean": 0.7301721763085399,
+   "f1_std": 0.0897531375977315,
+   "roc_auc_std": 0.1001509314362749,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "real",
+   "classifier": "Random Forest",
+   "f1_mean": 0.5844528599751107,
+   "roc_auc_mean": 0.6355881542699724,
+   "f1_std": 0.1123119584821311,
+   "roc_auc_std": 0.1180795690411722,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "real",
+   "classifier": "SVM",
+   "f1_mean": 0.6408889065845588,
+   "roc_auc_mean": 0.7106769972451791,
+   "f1_std": 0.09229054135373524,
+   "roc_auc_std": 0.09869417503930017,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "real",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.607022167727229,
+   "roc_auc_mean": 0.6415440771349863,
+   "f1_std": 0.09399978016934016,
+   "roc_auc_std": 0.1206303899162086,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "real",
+   "classifier": "XGBoost",
+   "f1_mean": 0.5643229682277159,
+   "roc_auc_mean": 0.6075289256198346,
+   "f1_std": 0.1121027154926605,
+   "roc_auc_std": 0.1379953024130222,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "recon",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.5005031295365865,
+   "roc_auc_mean": 0.5128360881542701,
+   "f1_std": 0.09681231348479585,
+   "roc_auc_std": 0.1174505349958219,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "recon",
+   "classifier": "Random Forest",
+   "f1_mean": 0.5365304224584025,
+   "roc_auc_mean": 0.5582190082644629,
+   "f1_std": 0.08756170124002455,
+   "roc_auc_std": 0.0984096117098095,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "recon",
+   "classifier": "SVM",
+   "f1_mean": 0.4817730559490999,
+   "roc_auc_mean": 0.4721067493112948,
+   "f1_std": 0.08061082830170574,
+   "roc_auc_std": 0.09669912844069559,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "recon",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.5230738309008062,
+   "roc_auc_mean": 0.5398911845730028,
+   "f1_std": 0.08346130360369843,
+   "roc_auc_std": 0.09473972752986086,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "recon",
+   "classifier": "XGBoost",
+   "f1_mean": 0.5190114139835516,
+   "roc_auc_mean": 0.5521363636363636,
+   "f1_std": 0.1011417802828983,
+   "roc_auc_std": 0.1122304472149265,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "urine",
+   "classifier": "Logistic Regression",
+   "f1_mean": 0.5010458390373668,
+   "roc_auc_mean": 0.5728966942148761,
+   "f1_std": 0.1089513717504472,
+   "roc_auc_std": 0.1303791010153388,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "urine",
+   "classifier": "Random Forest",
+   "f1_mean": 0.5145490209343013,
+   "roc_auc_mean": 0.5442837465564739,
+   "f1_std": 0.09389478263439052,
+   "roc_auc_std": 0.0860466915387145,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "urine",
+   "classifier": "SVM",
+   "f1_mean": 0.5216312223975418,
+   "roc_auc_mean": 0.4509125344352617,
+   "f1_std": 0.0928163511335539,
+   "roc_auc_std": 0.09102099367012498,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "urine",
+   "classifier": "Gradient Boosting",
+   "f1_mean": 0.5142932295294939,
+   "roc_auc_mean": 0.521404958677686,
+   "f1_std": 0.1058351269043327,
+   "roc_auc_std": 0.1210463568479873,
+   "pca_mode": 4
+  },
+  {
+   "endpoint": "HDL",
+   "input": "urine",
+   "classifier": "XGBoost",
+   "f1_mean": 0.5196210653432756,
+   "roc_auc_mean": 0.5430110192837465,
+   "f1_std": 0.08524525048848114,
+   "roc_auc_std": 0.09946473303517273,
+   "pca_mode": 4
+  }
+ ],
+ "info_fixed": {
+  "ite_global": 0.09586783507071697,
+  "ite_per_comp": [
+   0.1975054761698503,
+   0.002328269196769959,
+   0.015578137895633917,
+   0.02442903232782172,
+   0.05097248679228103,
+   0.013171746753822513,
+   0.027531765744253336,
+   0.013594990841624433,
+   0.062301453201895014,
+   0.017689409136364805
+  ],
+  "total_capacity_bits": 4.649678144190431,
+  "snr_per_comp": [
+   3.2067994262801784,
+   0.7935709779976586,
+   0.8314112527664768,
+   0.7457453003224507,
+   0.6878206646542397,
+   0.7437229289319816,
+   0.7557039285690628,
+   0.674556778840064,
+   0.7133173503171573,
+   0.7617947024320001
+  ],
+  "capacity_per_comp": [
+   1.0363615171340395,
+   0.42141741950555234,
+   0.4364778960335185,
+   0.40192154444195277,
+   0.37758081103953217,
+   0.4010854097329214,
+   0.4060247889519049,
+   0.3718896470137274,
+   0.3883962001488832,
+   0.4085229101883988
+  ],
+  "avg_cspr_auc": 0.8410564774951892,
+  "avg_cspr_f1": 0.8431879463776383,
+  "top_bins": [
+   179,
+   99,
+   103,
+   102,
+   100,
+   104,
+   183,
+   182,
+   101,
+   144
+  ]
+ },
+ "per_component": [
+  {
+   "PC": 1,
+   "Var_explained": 0.3109827002337158,
+   "Cumul_var": 0.3109827002337158,
+   "MI_nats": 0.7023568062722267,
+   "R2": 0.688162598569509,
+   "Pearson_r": 0.9553368113027535
+  },
+  {
+   "PC": 2,
+   "Var_explained": 0.1623027034370848,
+   "Cumul_var": 0.4732854036708006,
+   "MI_nats": 0.007522640835701644,
+   "R2": -0.2601267280756709,
+   "Pearson_r": -0.06957368271550515
+  },
+  {
+   "PC": 3,
+   "Var_explained": 0.07191685095860892,
+   "Cumul_var": 0.5452022546294095,
+   "MI_nats": 0.04399305166378031,
+   "R2": -0.2027741946871098,
+   "Pearson_r": 0.06236882606454489
+  },
+  {
+   "PC": 4,
+   "Var_explained": 0.04782271068579305,
+   "Cumul_var": 0.5930249653152025,
+   "MI_nats": 0.06400455503308944,
+   "R2": -0.3409403982400063,
+   "Pearson_r": -0.09144267182988954
+  },
+  {
+   "PC": 5,
+   "Var_explained": 0.03615263480562923,
+   "Cumul_var": 0.6291776001208318,
+   "MI_nats": 0.126419141160647,
+   "R2": -0.4538673398286015,
+   "Pearson_r": 0.004814994108903148
+  },
+  {
+   "PC": 6,
+   "Var_explained": 0.02303632119966028,
+   "Cumul_var": 0.652213921320492,
+   "MI_nats": 0.02969973131170267,
+   "R2": -0.3445867554951458,
+   "Pearson_r": 0.01427914211849506
+  },
+  {
+   "PC": 7,
+   "Var_explained": 0.0193251865814413,
+   "Cumul_var": 0.6715391079019334,
+   "MI_nats": 0.05966063082915518,
+   "R2": -0.3232695533203271,
+   "Pearson_r": 0.249357475372306
+  },
+  {
+   "PC": 8,
+   "Var_explained": 0.01408492601935189,
+   "Cumul_var": 0.6856240339212853,
+   "MI_nats": 0.02730992108921892,
+   "R2": -0.4824548968576858,
+   "Pearson_r": -0.03024629466492455
+  },
+  {
+   "PC": 9,
+   "Var_explained": 0.01156124567272552,
+   "Cumul_var": 0.6971852795940109,
+   "MI_nats": 0.119001946965315,
+   "R2": -0.4019005699992821,
+   "Pearson_r": -0.1713421051712503
+  },
+  {
+   "PC": 10,
+   "Var_explained": 0.01074032994960616,
+   "Cumul_var": 0.707925609543617,
+   "MI_nats": 0.03313708640165469,
+   "R2": -0.3126896220301072,
+   "Pearson_r": -0.1261464660558507
+  }
+ ]
+}

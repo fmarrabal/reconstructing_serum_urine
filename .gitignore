@@ -47,3 +47,10 @@ wandb/
 # Secrets
 .env
 *.token
+
+# v5 outputs not published (large or intermediate)
+Results_v5/models/*.npy
+Results_v5/classification/*/cache/
+Results_v5/logs/
+Results_v5_smoke/
+Results_Advanced/Results_Advanced.zip

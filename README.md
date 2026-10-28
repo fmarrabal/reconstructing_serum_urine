@@ -2,212 +2,164 @@
   <img src="logo.png" alt="Reconstructing Serum from Urine NMR" width="680"/>
 </p>
 
-# Reconstructing Serum Metabolomic Profiles from Urine NMR Data
+# Serum metabolome reconstruction from urine NMR data
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
 [![DOI](https://img.shields.io/badge/DOI-pending-lightgrey)]()
 
-**Proof-of-concept for indirect clinical prediction via cross-biofluid metabolomic reconstruction.**
+Code and pre-computed results for:
 
-> Marín-Manzano JD, Arrabal-Campos FM*, Fernández I*  
-> Universidad de Almería, Spain
+> Marín-Manzano JD, García-Mañas C, Tristán AI, Abreu AC\*, Arrabal-Campos FM\*, Fernández I\*.
+> *Serum metabolome reconstruction reveals transferable systemic metabolic information encoded in urine.*
+> Universidad de Almería, Spain. Submitted to *Bioinformatics*.
 
 ---
 
 ## Overview
 
-This repository contains the code for reconstructing serum metabolomic profiles from urine NMR data using machine learning and deep learning, and evaluating the clinical utility of the reconstructed profiles for disease diagnosis and biomarker prediction.
-
-**Key idea:** Urine is non-invasive and easy to collect, but most clinical biomarkers are measured in blood. We show that serum metabolomic profiles can be partially reconstructed from urinary NMR data, and that **77–84% of the clinically relevant diagnostic signal is preserved** through this reconstruction.
-
-### Pipeline
+Serum ¹H NMR profiles are reconstructed from urinary ¹H NMR profiles with 15 machine learning
+architectures and a weighted ensemble, all evaluated by nested cross-validation. The reconstructed
+serum is then used to predict COVID-19 status and binarised GGT, creatinine and HDL cholesterol,
+and compared with measured serum and with direct prediction from urine. A Shannon
+information-theoretic analysis quantifies how much information is transferred between biofluids.
 
 ```
-Urine NMR → [Reconstruction: 14 ML/DL models + ensemble] → Reconstructed Serum
-    → [Classification] → COVID diagnosis, GGT, Creatinine, HDL prediction
-    → [Information Transfer Analysis] → CSPR, channel capacity, ITE metrics
+Urine NMR ──► [15 models + cross-fitted ensemble, nested CV] ──► reconstructed serum
+                                         │
+   [same nested classification pipeline for real serum, reconstructed serum and urine]
+                                         ▼
+     COVID-19, GGT, creatinine, HDL  ──►  CSPR, ITE, channel capacity
 ```
 
-### Key Results
+## Key results (v5, nested protocol)
 
 | Metric | Value |
 |--------|-------|
-| Best reconstruction R² | 0.274 (weighted ensemble) |
-| Best single model R² | 0.259 (TabPFN) |
-| Clinical Signal Preservation (CSPR) | 76.9% (AUC), 80.6% (F1) |
-| Channel Capacity | 4.75 bits |
-| Models evaluated | 14 architectures |
+| Weighted ensemble R² (cross-fitted) | 0.272 ± 0.031 |
+| Best individual model | TabPFN-3.5, R² = 0.263 ± 0.039 |
+| Stable architectures (R² > 0.05) | 9 of 15 (R² = 0.07–0.26) |
+| Global information transfer efficiency (ITE) | 0.096 (PC1: 0.198, r = 0.955) |
+| Shannon channel capacity | 4.65 bits |
+| Mean CSPR, AUC / F1-macro | 76.4% / 75.5% |
+| Best F1-macro, real / reconstructed serum / urine — COVID-19 | 0.953 / 0.645 / 0.806 |
+| Best F1-macro, real / reconstructed serum / urine — HDL cholesterol | 0.716 / 0.528 / 0.541 |
 
-## Repository Structure
+CSPR is the ratio of reconstructed- to measured-serum performance. Because it is a ratio of raw
+metrics, a chance-level classifier still obtains a non-zero CSPR; chance-corrected values are in
+`Results_v5/` and in Table S8 of the Supplementary Information.
+
+## What changed in v5 (revision, October 2026)
+
+* **No information leakage in preprocessing.** The PQN reference spectrum and the Shannon
+  mutual-information (MI) feature weights are now estimated inside every training partition
+  (outer and inner folds). In v4 both were computed once on all 289 samples; the MI weights used
+  the serum targets of the test samples.
+* **Cross-fitted ensemble and stacking.** Candidate models, ensemble weights and meta-learner
+  hyperparameters for each outer test fold are selected using only the other folds, so the
+  ensemble R² is a proper nested estimate.
+* **One classification protocol for every input.** Real serum, reconstructed serum and urine are
+  classified with the same pipeline (median imputation, PQN for urine, StandardScaler, PCA),
+  classifiers, hyperparameter grids and partitions, with nested CV (`--protocol nested`, main
+  analysis). A fixed-hyperparameter protocol with four PCA components (`--protocol fixed`) is
+  reported as a sensitivity analysis.
+* **CSPR from the main classification.** CSPR is computed from the same classification results
+  as Table 2 (five classifiers), not from a separate set-up.
+* **TabPFN-3.5** (package `tabpfn` 9.2) replaces TabPFN-2.5; its point prediction (mean, median or
+  mode of the predictive distribution) is tuned in the inner loop.
+* Training R², overfitting gap and MAE are reported for all models; the spectral information map
+  is plotted against the urine bin index (the bucket tables carry no chemical-shift labels).
+
+The v4 code and results are kept in [`legacy_v4/`](legacy_v4/) for reference.
+
+## Repository structure
 
 ```
-├── serum_reconstruction_v4.py      # Main reconstruction pipeline (14 models + ensemble)
-├── classification_ensemble.py      # Clinical classification using reconstructed serum
-├── info_transfer_analysis.py       # Shannon information transfer quantification
-├── setup.sh                        # Environment setup script
-├── requirements.txt                # Python dependencies
-├── Data/                           # NMR data (not included — see below)
-├── Results_Advanced/               # Pre-computed results
-│   ├── results_comparison_v4.xlsx
-│   ├── predicted_serum_ensemble.xlsx
-│   ├── classification_summary_comparison.xlsx
-│   └── ...
-└── Figures_InfoTransfer/           # Publication-quality figures
-    ├── information_transfer_dashboard.png
-    ├── cspr_detail.png
-    ├── channel_analysis.png
-    └── mi_heatmap.png
+├── serum_reconstruction_v5.py   # 15 models, nested CV, cross-fitted ensemble/stacking
+├── run_v5_groups.sh             # runs groups of models in parallel processes
+├── classification_v5.py         # nested and fixed protocols for real/reconstructed serum and urine
+├── info_transfer_v5.py          # ITE, MI, channel capacity, CSPR, Figures S1–S4
+├── make_figure1_v5.py           # Figure 1 of the manuscript
+├── requirements.txt
+├── Data/                        # NMR bucket tables (not included, see Data/README.md)
+├── Results_v5/
+│   ├── models/*.json            # per-model results, fold-level R² and selected hyperparameters
+│   ├── results_comparison_v5.xlsx, results_v5.json, ensemble_v5.json
+│   ├── predicted_serum_ensemble_full.xlsx   # cross-fitted reconstructed serum (289 × 231)
+│   ├── classification/{nested,fixed}/       # summaries, fold-level metrics, CSPR tables
+│   ├── info_transfer/{nested,fixed}/        # ITE/MI/SNR/capacity tables
+│   └── all_results_v5.json                  # every number used in the manuscript
+├── Figures_v5/                  # Figure 1 and Figures S1–S4 for both protocols
+└── legacy_v4/                   # previous version (v4) of code and results
 ```
 
 ## Installation
 
-### Quick Setup
-
 ```bash
-# Clone the repository
 git clone https://github.com/fmarrabal/reconstructing_serum_urine.git
 cd reconstructing_serum_urine
-
-# Create conda environment
-conda create -n serum_recon python=3.11 -y
-conda activate serum_recon
-
-# Install dependencies
+python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
+# PyTorch with CUDA (optional but recommended for TabPFN and the neural networks)
+pip install torch --index-url https://download.pytorch.org/whl/cu130
 pip install -r requirements.txt
-
-# For GPU support (optional, recommended for TabPFN):
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
 
-### Authentication for TabPFN
+### TabPFN-3.5 weights
 
-TabPFN is a transformer-based foundation model for tabular data ([Hollmann et al., *Nature* 2025](https://www.nature.com/articles/s41586-024-08328-6)). It is the best individual model in our pipeline (R² = 0.259) and carries 54.8% of the ensemble weight. **It requires a one-time authentication** with Prior Labs to download the model weights (~41 MB).
-
-#### Step 1: Create a Prior Labs account
-
-1. Go to [https://ux.priorlabs.ai/account](https://ux.priorlabs.ai/account)
-2. Register with your email (or sign in if you already have an account)
-
-#### Step 2: Accept the TabPFN licence
-
-1. Go to [https://ux.priorlabs.ai/account/licenses](https://ux.priorlabs.ai/account/licenses)
-2. Accept the TabPFN licence (free for research and non-commercial use)
-
-#### Step 3: Copy your Access Token
-
-1. On your account page, find your **Access Token** and copy it
-
-#### Step 4: Save the token locally
-
-```bash
-# Option A: Save to config file (recommended, one-time setup)
-python -c "
-import os
-token = 'PASTE_YOUR_TOKEN_HERE'
-config_dir = os.path.expanduser('~/.tabpfn')
-os.makedirs(config_dir, exist_ok=True)
-with open(os.path.join(config_dir, 'access_token'), 'w') as f:
-    f.write(token)
-print('Token saved to', config_dir)
-"
-
-# Option B: Set as environment variable (per session)
-export TABPFN_ACCESS_TOKEN="PASTE_YOUR_TOKEN_HERE"
-```
-
-#### Step 5: Verify it works
-
-```bash
-conda activate serum_recon
-python -c "from tabpfn import TabPFNRegressor; r = TabPFNRegressor(device='cpu'); print('TabPFN OK')"
-```
-
-The first run will download the model checkpoint. If you see `TabPFN OK`, you're ready.
-
-#### Alternative: HuggingFace authentication
-
-Older versions of TabPFN (≤0.1.11) use HuggingFace instead of Prior Labs:
-
-```bash
-pip install huggingface_hub
-huggingface-cli login  # Paste your HF token from https://huggingface.co/settings/tokens
-```
-
-You must also accept the model terms at [https://huggingface.co/Prior-Labs/tabpfn_2_5](https://huggingface.co/Prior-Labs/tabpfn_2_5) and ensure your token has **"Read access to public gated repos"** enabled.
-
-#### Skipping TabPFN
-
-If you cannot authenticate, the pipeline will still run — TabPFN will fail gracefully and the ensemble will be built from the remaining models. To skip it explicitly, comment out `run_tabpfn(); gc.collect()` near the end of `serum_reconstruction_v4.py`.
+The TabPFN-3.5 weights are released by Prior Labs under a non-commercial licence (research use is
+permitted). On first use, `tabpfn` opens a browser to log in at Prior Labs and accept the licence,
+then downloads and caches the weights; afterwards it works offline. In headless environments,
+accept the licence at <https://ux.priorlabs.ai> and set the `TABPFN_TOKEN` environment variable.
+Never write tokens into the scripts.
 
 ## Usage
 
-### 1. Serum Reconstruction
+All scripts are run from the repository root with the data in `Data/`.
 
 ```bash
-python serum_reconstruction_v4.py
+# 1. Serum reconstruction (one or several models per process; outputs go to Results_v5/models)
+python serum_reconstruction_v5.py --models BaggingSVR+,BaggingKNN,PLS,Ridge,ElasticNet
+python serum_reconstruction_v5.py --models TabPFN --tabpfn-version v3.5
+bash run_v5_groups.sh "XGBoost,LightGBM,ExtraTrees" "MLP_Wide" "MLP_Deep" "SAN_MLP" "ResidualMLP" "1D_CNN" "TabNet"
+python serum_reconstruction_v5.py --ensemble        # cross-fitted ensemble and stacking
+
+# 2. Classification of real serum, reconstructed serum and urine (both protocols)
+python classification_v5.py --protocol both --recon Results_v5/predicted_serum_ensemble_full.xlsx
+
+# 3. Information-transfer analysis and figures
+python info_transfer_v5.py --cspr-dir Results_v5/classification/nested \
+       --out-dir Results_v5/info_transfer/nested --fig-dir Figures_v5/nested
+python make_figure1_v5.py Results_v5/all_results_v5.json Figures_v5/Figure1.png
 ```
 
-Trains 14 model architectures with nested cross-validation and Optuna HPO:
-- **Kernel methods:** BaggingSVR+
-- **Tree ensembles:** XGBoost, LightGBM, ExtraTrees
-- **Neural networks:** MLP (wide/deep), Spectral Attention MLP, Residual MLP, 1D-CNN
-- **Tabular foundation models:** TabPFN, TabNet
-- **Linear models:** Ridge, ElasticNet, PLS
-- **Meta-learning:** Weighted ensemble, Stacking
-
-Output: `Results_Advanced/predicted_serum_ensemble.xlsx`
-
-### 2. Clinical Classification
-
-```bash
-python classification_ensemble.py
-```
-
-Evaluates COVID diagnosis, GGT, creatinine, and HDL classification using the reconstructed serum profiles vs. real serum.
-
-### 3. Information Transfer Analysis
-
-```bash
-python info_transfer_analysis.py
-```
-
-Quantifies how much clinically relevant information survives the reconstruction using Shannon information theory:
-- **CSPR** (Clinical Signal Preservation Ratio)
-- **ITE** (Information Transfer Efficiency)
-- **Channel Capacity** (bits)
-- **Spectral Information Map** (per NMR bin)
+`--smoke` runs the reconstruction with very few trials to test the pipeline end to end. With the
+settings of the paper, the reconstruction takes about 3 h on a 16-thread workstation with one GPU
+when the model groups are run in parallel.
 
 ## Data
 
-The NMR data used in this study are not included in this repository due to patient privacy. The datasets required are:
-
-- `Data/bucket_table_orina_COVID+PRECANCER_noscaling.xlsx` — Urine NMR bucket table (289 × 234)
-- `Data/bucket_table_suero_COVID+PRECANCER_scaling.xlsx` — Serum NMR bucket table (289 × 255, including clinical variables)
-
-The cohort comprises 73 COVID-19 patients, 31 healthy controls, 21 colorectal cancer patients, and 164 cancer-free controls. Data availability requests should be directed to the corresponding authors.
+The NMR data are not included because they are patient data subject to ethical restrictions. See
+[`Data/README.md`](Data/README.md) for the expected files. Access requests should be directed to
+the corresponding authors.
 
 ## Citation
 
-If you use this code, please cite:
-
 ```bibtex
-@article{marin2026reconstructing,
-  title={Reconstructing Serum Metabolomic Profiles from Urine {NMR} Data: 
-         Proof-of-Concept for Indirect Clinical Prediction},
-  author={Mar{\'\i}n-Manzano, Juan de Dios and Arrabal-Campos, Francisco Manuel 
-          and Fern{\'a}ndez, Ignacio},
-  journal={Angewandte Chemie},
-  year={2026},
-  note={Submitted}
+@article{marin2026serum,
+  title   = {Serum metabolome reconstruction reveals transferable systemic metabolic information encoded in urine},
+  author  = {Mar{\'\i}n-Manzano, Juan de Dios and Garc{\'\i}a-Ma{\~n}as, Celia and Trist{\'a}n, Ana Isabel and
+             Abreu, Ana Cristina and Arrabal-Campos, Francisco Manuel and Fern{\'a}ndez, Ignacio},
+  journal = {Bioinformatics},
+  year    = {2026},
+  note    = {Submitted}
 }
 ```
 
 ## License
 
-This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
+MIT — see [LICENSE](LICENSE). The TabPFN-3.5 weights are subject to their own non-commercial licence.
 
 ## Contact
 
-- **Francisco Manuel Arrabal-Campos** — [fmarrabal@ual.es](mailto:fmarrabal@ual.es) — [www.nmrmbc.com](http://www.nmrmbc.com)
-- Department of Engineering, Universidad de Almería, Spain
+- Francisco Manuel Arrabal-Campos — [fmarrabal@ual.es](mailto:fmarrabal@ual.es)
+- Ignacio Fernández — [ifernan@ual.es](mailto:ifernan@ual.es)

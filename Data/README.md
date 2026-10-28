@@ -8,7 +8,7 @@ These files are **not included** in the repository due to patient privacy.
 | File | Description | Shape |
 |------|-------------|-------|
 | `bucket_table_orina_COVID+PRECANCER_noscaling.xlsx` | Urine NMR bucket table (raw, no normalization) | 289 × 236 (2 ID cols + 234 spectral bins) |
-| `bucket_table_suero_COVID+PRECANCER_scaling.xlsx` | Serum NMR bucket table (TSP-normalized) + clinical variables | 289 × 257 (2 ID cols + 231 spectral bins + 24 clinical) |
+| `bucket_table_suero_COVID+PRECANCER_scaling.xlsx` | Serum NMR bucket table (normalised to total spectral intensity) + clinical variables | 289 × 257 (2 ID cols + 231 spectral bins + 24 clinical) |
 
 ## Cohort
 
