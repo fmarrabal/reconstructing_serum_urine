@@ -6,6 +6,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
+[![Release](https://img.shields.io/github/v/release/fmarrabal/reconstructing_serum_urine)](https://github.com/fmarrabal/reconstructing_serum_urine/releases/tag/v5)
 [![DOI](https://img.shields.io/badge/DOI-pending-lightgrey)]()
 
 Code and pre-computed results for:
@@ -13,6 +14,11 @@ Code and pre-computed results for:
 > Marín-Manzano JD, García-Mañas C, Tristán AI, Abreu AC\*, Arrabal-Campos FM\*, Fernández I\*.
 > *Serum metabolome reconstruction reveals transferable systemic metabolic information encoded in urine.*
 > Universidad de Almería, Spain. Submitted to *Bioinformatics*.
+
+> [!NOTE]
+> The manuscript refers to the code version **v5**, archived as release
+> [`v5`](https://github.com/fmarrabal/reconstructing_serum_urine/releases/tag/v5).
+> Use that release to reproduce the numbers in the paper; `main` may receive later changes.
 
 ---
 
@@ -96,7 +102,7 @@ The v4 code and results are kept in [`legacy_v4/`](legacy_v4/) for reference.
 ## Installation
 
 ```bash
-git clone https://github.com/fmarrabal/reconstructing_serum_urine.git
+git clone --branch v5 https://github.com/fmarrabal/reconstructing_serum_urine.git   # version used in the paper
 cd reconstructing_serum_urine
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 # PyTorch with CUDA (optional but recommended for TabPFN and the neural networks)
@@ -109,7 +115,7 @@ pip install -r requirements.txt
 The TabPFN-3.5 weights are released by Prior Labs under a non-commercial licence (research use is
 permitted). On first use, `tabpfn` opens a browser to log in at Prior Labs and accept the licence,
 then downloads and caches the weights; afterwards it works offline. In headless environments,
-accept the licence at <https://ux.priorlabs.ai> and set the `TABPFN_TOKEN` environment variable.
+accept the licence at <https://ux.priorlabs.ai/account> and set the `TABPFN_TOKEN` environment variable.
 Never write tokens into the scripts.
 
 ## Usage
@@ -154,6 +160,9 @@ the corresponding authors.
   note    = {Submitted}
 }
 ```
+
+When citing the code, please also give the version used:
+`https://github.com/fmarrabal/reconstructing_serum_urine/releases/tag/v5`.
 
 ## License
 
